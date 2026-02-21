@@ -1,28 +1,29 @@
 import Image from "next/image";
 import DateInput from "./components/DateInput";
+import MobileNav from "./components/MobileNav";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Modern Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+      <nav className="fixed top-0 left-0 right-0 z-[100] isolate bg-white border-b border-gray-100 shadow-sm" style={{ transform: 'translateZ(0)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16 sm:h-20">
             {/* Logo */}
-            <div className="flex items-center">
-              <div className="flex items-center space-x-3">
-                <div className="flex items-center justify-center">
+            <div className="flex items-center min-w-0">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="flex-shrink-0">
                   <Image
                     src="/headerlogo2.png"
                     alt="Kooplicat Logo"
                     width={40}
                     height={40}
-                    className="object-contain"
+                    className="object-contain w-9 h-9 sm:w-10 sm:h-10"
                   />
                 </div>
-                <div>
-                  <span className="text-2xl font-bold text-gray-900 tracking-tight block">Kooplicat</span>
-                  <span className="text-sm text-gray-600 font-medium -mt-1 block">Ayurveda Hospital</span>
+                <div className="min-w-0">
+                  <span className="text-lg sm:text-2xl font-bold text-gray-900 tracking-tight block truncate">Kooplicat</span>
+                  <span className="text-xs sm:text-sm text-gray-600 font-medium -mt-0.5 block truncate">Ayurveda Hospital</span>
                 </div>
               </div>
             </div>
@@ -60,66 +61,124 @@ export default function Home() {
                 Book Appointment
               </a>
             </div>
+
+            {/* Mobile Menu */}
+            <MobileNav />
           </div>
         </div>
       </nav>
 
       {/* Hero Section - Professional Desktop Layout */}
-      <section id="home" className="pt-20 bg-gradient-to-br from-orange-50 via-white to-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-16 xl:gap-20 items-start">
-            {/* Left Content */}
-            <div className="space-y-4">
-              <div className="space-y-4">
-                <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight">
-                  Stop "Managing" Your Back Pain
+      <section id="home" className="pt-16 sm:pt-20 lg:min-h-screen bg-gradient-to-br from-orange-50 via-white to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-start">
+            {/* Booking Form - Second on mobile, right column on desktop */}
+            <div className="lg:pl-6 order-2">
+              <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 lg:p-8 border border-gray-100">
+                <div className="text-center mb-4 lg:mb-6">
+                  <h2 className="text-xl sm:text-2xl lg:text-5xl font-bold text-gray-900 mb-1 sm:mb-2">Book Appointment</h2>
+                  <p className="text-base sm:text-lg lg:text-3xl font-semibold text-gray-800">Consultation at <span className="text-orange-600 font-bold">Rs. 300/-</span></p>
+                </div>
+                
+                <form className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm lg:text-base font-bold text-gray-700 mb-2">
+                      Full Name:
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="Enter your full name"
+                      className="w-full px-4 py-3 lg:py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" className="block text-sm lg:text-base font-bold text-gray-700 mb-2">
+                      Phone Number:
+                    </label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      placeholder="Your Number.."
+                      className="w-full px-4 py-3 lg:py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="date" className="block text-sm lg:text-base font-bold text-gray-700 mb-2">
+                      Day of visit:
+                    </label>
+                    <DateInput
+                      id="date"
+                      className="w-full px-4 py-3 lg:py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm lg:text-base font-medium"
+                    />
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    className="w-full bg-orange-600 hover:bg-orange-700 text-white py-4 lg:py-5 rounded-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 text-lg lg:text-xl"
+                  >
+                    Check Availability
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            {/* Left Content - First on mobile, left column on desktop */}
+            <div className="space-y-4 sm:space-y-6 order-1 lg:flex lg:flex-col lg:justify-center">
+              <div className="space-y-3 sm:space-y-4">
+                <h1 className="text-4xl sm:text-5xl lg:text-8xl xl:text-9xl font-black text-gray-900 leading-[1.1] tracking-tight">
+                  Stop &quot;Managing&quot; Your Back Pain
                   <br />
                   <span className="text-orange-600 font-black">Start Healing It.</span>
                 </h1>
-                <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-2xl font-medium">
+                <p className="text-lg sm:text-xl lg:text-3xl xl:text-4xl text-gray-600 leading-relaxed max-w-2xl font-medium">
                   Experience Kerala&apos;s most trusted Ayurvedic Spine Care. No surgery, no heavy sedation.
                 </p>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex items-center space-x-4">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-green-100 rounded-2xl flex items-center justify-center">
+                      <svg className="w-6 h-6 lg:w-8 lg:h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                   </div>
-                  <p className="text-gray-900 font-semibold text-lg">Physical Exam by Senior BAMS/MD Doctors</p>
+                  <p className="text-gray-900 font-semibold text-base lg:text-2xl min-w-0">Physical Exam by Senior BAMS/MD Doctors</p>
                 </div>
                 
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-green-100 rounded-2xl flex items-center justify-center">
+                      <svg className="w-6 h-6 lg:w-8 lg:h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                   </div>
-                  <p className="text-gray-900 font-semibold text-lg">Authentic Nadi Pariksha (Pulse Diagnosis)</p>
+                  <p className="text-gray-900 font-semibold text-base lg:text-2xl min-w-0">Authentic Nadi Pariksha (Pulse Diagnosis)</p>
                 </div>
 
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-green-100 rounded-2xl flex items-center justify-center">
+                      <svg className="w-6 h-6 lg:w-8 lg:h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                   </div>
-                  <p className="text-gray-900 font-semibold text-lg">100% Natural Medicines</p>
+                  <p className="text-gray-900 font-semibold text-base lg:text-2xl min-w-0">100% Natural Medicines</p>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-3 pt-2">
                 <a
                   href="tel:+919876543210"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-orange-600 text-orange-600 hover:bg-orange-50 px-6 py-3 sm:px-8 sm:py-4 rounded-xl text-base sm:text-lg font-bold transition-all hover:shadow-lg text-center min-w-0 flex-1 sm:flex-none"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-orange-600 text-orange-600 hover:bg-orange-50 px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg text-center min-w-0 flex-1 sm:flex-none"
                 >
                   <svg className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -130,7 +189,7 @@ export default function Home() {
                   href="https://wa.me/919876543210"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl text-base sm:text-lg font-bold transition-all hover:shadow-xl hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
+                  className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
                 >
                   <svg className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -139,92 +198,37 @@ export default function Home() {
                 </a>
               </div>
             </div>
-
-            {/* Right Content - Booking Form */}
-            <div className="lg:pl-6">
-              <div className="bg-white rounded-3xl shadow-2xl p-6 border border-gray-100">
-                <div className="text-center mb-4">
-                  <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Book Appointment</h2>
-                  <p className="text-lg lg:text-xl font-semibold text-gray-800">Consultation at <span className="text-orange-600 font-bold">Rs. 300/-</span></p>
-                </div>
-                
-                <form className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2">
-                      Full Name:
-                    </label>
-                    <input
-                      id="name"
-                      type="text"
-                      placeholder="Enter your full name"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm font-medium placeholder:text-gray-500"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-2">
-                      Phone Number:
-                    </label>
-                    <input
-                      id="phone"
-                      type="tel"
-                      placeholder="Your Number.."
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm font-medium placeholder:text-gray-500"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="date" className="block text-sm font-bold text-gray-700 mb-2">
-                      Day of visit:
-                    </label>
-                    <DateInput
-                      id="date"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm font-medium"
-                    />
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full bg-orange-600 hover:bg-orange-700 text-white py-4 rounded-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 text-lg"
-                  >
-                    Check Availability
-                  </button>
-                </form>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Trusted by Thousands of Patients</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
-              Our commitment to authentic Ayurvedic healing has made us Kerala's preferred spine care destination
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-6">Trusted by Thousands of Patients</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto font-medium px-1">
+              Our commitment to authentic Ayurvedic healing has made us Kerala&apos;s preferred spine care destination
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {[
               { value: "25+", label: "Years of Excellence" },
               { value: "40,000+", label: "Patients Treated" },
               { value: "95%", label: "Success Rate" },
               { value: "100+", label: "Ayurvedic Treatments" },
             ].map((stat, index) => (
-              <div key={index} className="text-center p-8 bg-white rounded-2xl shadow-lg">
-                <div className="text-5xl font-black text-orange-600 mb-3">{stat.value}</div>
-                <div className="text-gray-700 font-semibold text-lg">{stat.label}</div>
+              <div key={index} className="text-center p-4 sm:p-6 md:p-8 bg-white rounded-xl sm:rounded-2xl shadow-lg">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-orange-600 mb-1 sm:mb-2 md:mb-3">{stat.value}</div>
+                <div className="text-gray-700 font-semibold text-sm sm:text-base md:text-lg">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Treatments Section */}
+      {/* Treatments Section
       <section id="treatments" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -275,7 +279,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      about
       <section id="about" className="py-20 bg-orange-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -339,7 +343,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      testimonial
       <section id="testimonials" className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
@@ -389,7 +393,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      contact
       <section id="contact" className="py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
@@ -488,56 +492,56 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-10 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            <div className="sm:col-span-2 md:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold text-sm">AS</span>
                 </div>
-                <span className="text-xl font-bold">AyurSpine</span>
+                <span className="text-lg sm:text-xl font-bold">AyurSpine</span>
               </div>
-              <p className="text-gray-400 font-medium">
-                Kerala's trusted Ayurvedic spine care center with 25+ years of excellence in natural healing.
+              <p className="text-gray-400 font-medium text-sm sm:text-base">
+                Kerala&apos;s trusted Ayurvedic spine care center with 25+ years of excellence in natural healing.
               </p>
             </div>
             
             <div>
-              <h4 className="font-bold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#home" className="hover:text-white transition-colors font-medium">Home</a></li>
-                <li><a href="#about" className="hover:text-white transition-colors font-medium">About</a></li>
-                <li><a href="#treatments" className="hover:text-white transition-colors font-medium">Treatments</a></li>
-                <li><a href="#testimonials" className="hover:text-white transition-colors font-medium">Testimonials</a></li>
+              <h4 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h4>
+              <ul className="space-y-1.5 sm:space-y-2 text-gray-400">
+                <li><a href="#home" className="hover:text-white transition-colors font-medium text-sm sm:text-base">Home</a></li>
+                <li><a href="#about" className="hover:text-white transition-colors font-medium text-sm sm:text-base">About</a></li>
+                <li><a href="#treatments" className="hover:text-white transition-colors font-medium text-sm sm:text-base">Treatments</a></li>
+                <li><a href="#testimonials" className="hover:text-white transition-colors font-medium text-sm sm:text-base">Testimonials</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold mb-4">Treatments</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><span className="hover:text-white transition-colors cursor-pointer font-medium">Spine Care</span></li>
-                <li><span className="hover:text-white transition-colors cursor-pointer font-medium">Back Pain</span></li>
-                <li><span className="hover:text-white transition-colors cursor-pointer font-medium">Joint Pain</span></li>
-                <li><span className="hover:text-white transition-colors cursor-pointer font-medium">Panchakarma</span></li>
+              <h4 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Treatments</h4>
+              <ul className="space-y-1.5 sm:space-y-2 text-gray-400">
+                <li><span className="hover:text-white transition-colors cursor-pointer font-medium text-sm sm:text-base">Spine Care</span></li>
+                <li><span className="hover:text-white transition-colors cursor-pointer font-medium text-sm sm:text-base">Back Pain</span></li>
+                <li><span className="hover:text-white transition-colors cursor-pointer font-medium text-sm sm:text-base">Joint Pain</span></li>
+                <li><span className="hover:text-white transition-colors cursor-pointer font-medium text-sm sm:text-base">Panchakarma</span></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold mb-4">Contact</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li className="font-medium">+91 98765 43210</li>
-                <li className="font-medium">info@ayurspine.com</li>
-                <li className="font-medium">Kottayam, Kerala</li>
+              <h4 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Contact</h4>
+              <ul className="space-y-1.5 sm:space-y-2 text-gray-400">
+                <li className="font-medium text-sm sm:text-base">+91 98765 43210</li>
+                <li className="font-medium text-sm sm:text-base break-all">info@ayurspine.com</li>
+                <li className="font-medium text-sm sm:text-base">Kottayam, Kerala</li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p className="font-medium">&copy; 2024 AyurSpine. All rights reserved. | Kerala's Premier Ayurvedic Spine Care Center</p>
+          <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-400">
+            <p className="font-medium text-xs sm:text-sm md:text-base px-2">&copy; 2024 AyurSpine. All rights reserved. | Kerala&apos;s Premier Ayurvedic Spine Care Center</p>
           </div>
         </div>
       </footer>
