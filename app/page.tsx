@@ -66,7 +66,7 @@ export default function Home() {
       {/* Hero Section - Professional Desktop Layout */}
       <section id="home" className="pt-20 bg-gradient-to-br from-orange-50 via-white to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-          <div className="grid lg:grid-cols-2 gap-16 xl:gap-20 items-center min-h-[600px]">
+          <div className="grid lg:grid-cols-2 gap-16 xl:gap-20 items-start min-h-[600px]">
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-6">
