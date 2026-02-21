@@ -209,6 +209,12 @@ input, textarea, select {
   font-weight: 500;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
 /* Button text */
 button {
   font-family: var(--font-poppins), sans-serif;

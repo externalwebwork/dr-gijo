@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DateInput from "./components/DateInput";
 
 export default function Home() {
   return (
@@ -81,7 +82,7 @@ export default function Home() {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-start space-x-4">
+                <div className="flex items-center space-x-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
                       <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,13 +90,10 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Expert Doctors</h3>
-                    <p className="text-gray-600 font-medium text-lg">Senior BAMS/MD physicians with 25+ years experience</p>
-                  </div>
+                  <p className="text-gray-900 font-semibold text-lg">Physical Exam by Senior BAMS/MD Doctors</p>
                 </div>
                 
-                <div className="flex items-start space-x-4">
+                <div className="flex items-center space-x-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
                       <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,13 +101,10 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Authentic Treatments</h3>
-                    <p className="text-gray-600 font-medium text-lg">Traditional Nadi Pariksha and 100% natural medicines</p>
-                  </div>
+                  <p className="text-gray-900 font-semibold text-lg">Authentic Nadi Pariksha (Pulse Diagnosis)</p>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                <div className="flex items-center space-x-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
                       <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,10 +112,7 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">40,000+ Happy Patients</h3>
-                    <p className="text-gray-600 font-medium text-lg">Proven results with personalized treatment plans</p>
-                  </div>
+                  <p className="text-gray-900 font-semibold text-lg">100% Natural Medicines</p>
                 </div>
               </div>
 
@@ -152,8 +144,8 @@ export default function Home() {
             <div className="lg:pl-6">
               <div className="bg-white rounded-3xl shadow-2xl p-6 border border-gray-100">
                 <div className="text-center mb-4">
-                  <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">Book Your Consultation</h2>
-                  <p className="text-gray-600 font-medium">Get started on your healing journey today</p>
+                  <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Book Appointment</h2>
+                  <p className="text-lg lg:text-xl font-semibold text-gray-800">Consultation at <span className="text-orange-600 font-bold">Rs. 300/-</span></p>
                 </div>
                 
                 <form className="space-y-4">
@@ -165,7 +157,7 @@ export default function Home() {
                       id="name"
                       type="text"
                       placeholder="Enter your full name"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm font-medium"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm font-medium placeholder:text-gray-500"
                       required
                     />
                   </div>
@@ -177,8 +169,8 @@ export default function Home() {
                     <input
                       id="phone"
                       type="tel"
-                      placeholder="+91 98765 43210"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm font-medium"
+                      placeholder="Your Number.."
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm font-medium placeholder:text-gray-500"
                       required
                     />
                   </div>
@@ -187,9 +179,8 @@ export default function Home() {
                     <label htmlFor="date" className="block text-sm font-bold text-gray-700 mb-2">
                       Day of visit:
                     </label>
-                    <input
+                    <DateInput
                       id="date"
-                      type="date"
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm font-medium"
                     />
                   </div>
