@@ -317,21 +317,33 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
             {[
-              { value: "25+", label: "Years of Excellence" },
-              { value: "40,000+", label: "Patients Treated" },
-              { value: "95%", label: "Success Rate" },
-              { value: "100+", label: "Ayurvedic Treatments" },
+              { value: "25+", label: "Years Experience" },
+              { value: "40000+", label: "Happy Patients" },
+              { value: "", label: "Panchakarma Specialists", icon: "/CGHS-hospital.png" },
+              { value: "", label: "Personalized Treatment Plans", icon: "/NABH.png" },
+              { value: "100+", label: "Treatments" },
             ].map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-4 sm:p-6 md:p-8 bg-white rounded-xl sm:rounded-2xl shadow-lg"
+                className="text-center p-6 sm:p-8 md:p-10 bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow min-h-[180px] flex flex-col justify-center"
               >
-                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-orange-600 mb-1 sm:mb-2 md:mb-3">
-                  {stat.value}
-                </div>
-                <div className="text-gray-700 font-semibold text-sm sm:text-base md:text-lg">
+                {stat.value && (
+                  <div className="text-4xl sm:text-5xl md:text-6xl font-black text-orange-600 mb-2 sm:mb-3 md:mb-4">
+                    {stat.value}
+                  </div>
+                )}
+                {stat.icon && (
+                  <div className="sm:mb-4 flex justify-center">
+                    <img
+                      src={stat.icon}
+                      alt={stat.label}
+                      className="w-12 h-12 sm:w-20 sm:h-20 md:w-14 md:h-14 object-contain"
+                    />
+                  </div>
+                )}
+                <div className="text-gray-700 font-bold text-sm sm:text-base md:text-lg leading-tight">
                   {stat.label}
                 </div>
               </div>
