@@ -87,14 +87,14 @@ export default function HeroSection() {
           {/* Left Content - First on mobile, left column on desktop */}
           <div className="space-y-4 sm:space-y-6 order-1 lg:flex lg:flex-col lg:justify-center">
             <div className="space-y-3 sm:space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-8xl xl:text-9xl font-black text-gray-900 leading-[1.1] tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-8xl xl:text-9xl font-black text-gray-900 leading-[1.1] tracking-tight text-center">
                 Stop &quot;Managing&quot; Your Back Pain
                 <br />
                 <span className="text-orange-600 font-black">
                   Start Healing It.
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl lg:text-3xl xl:text-4xl text-gray-600 leading-relaxed max-w-2xl font-medium">
+              <p className="text-lg sm:text-xl lg:text-3xl xl:text-4xl text-gray-600 leading-relaxed max-w-2xl font-medium text-center mx-auto">
                 Experience Kerala&apos;s most trusted Ayurvedic Spine Care. No
                 surgery, no heavy sedation.
               </p>

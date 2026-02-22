@@ -16,7 +16,7 @@ export default function PainReliefSection() {
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8">
             <div className="space-y-4 sm:space-y-6">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight text-center">
                 Is Your Back Pain Making Your Life 
                 <span className="block text-orange-600 font-black mt-2">"Limited"?</span>
               </h2>
