@@ -211,7 +211,7 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                  <p className="text-gray-900 font-semibold text-base lg:text-2xl min-w-0">
+                  <p className="text-black font-black text-lg lg:text-3xl min-w-0 flex items-center leading-tight">
                     Physical Exam by Senior BAMS/MD Doctors
                   </p>
                 </div>
@@ -234,7 +234,7 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                  <p className="text-gray-900 font-semibold text-base lg:text-2xl min-w-0">
+                  <p className="text-black font-black text-lg lg:text-3xl min-w-0 flex items-center leading-tight">
                     Authentic Nadi Pariksha (Pulse Diagnosis)
                   </p>
                 </div>
@@ -257,7 +257,7 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                  <p className="text-gray-900 font-semibold text-base lg:text-2xl min-w-0">
+                  <p className="text-black font-black text-lg lg:text-3xl min-w-0 flex items-center leading-tight">
                     100% Natural Medicines
                   </p>
                 </div>
@@ -266,7 +266,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3 pt-2">
                 <a
                   href="tel:+919876543210"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-orange-600 text-orange-600 hover:bg-orange-50 px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg text-center min-w-0 flex-1 sm:flex-none"
+                  className="inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
                 >
                   <svg
                     className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
