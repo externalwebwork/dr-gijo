@@ -4,8 +4,7 @@ import MobileNav from "./MobileNav";
 export default function Navigation() {
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-[100] isolate bg-white border-b border-gray-100 shadow-sm overflow-x-hidden"
-      style={{ transform: "translateZ(0)" }}
+      className="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-gray-100 shadow-sm"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
