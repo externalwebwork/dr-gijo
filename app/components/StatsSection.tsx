@@ -78,9 +78,9 @@ export default function StatsSection() {
   }, [goToSlide, stats.length]);
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gray-100">
+    <section className="py-12 sm:py-16 lg:py-10 bg-gray-100 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-6">
             Trusted by Thousands of Patients
           </h2>
@@ -90,7 +90,7 @@ export default function StatsSection() {
           </p>
         </div>
 
-        <div className="relative md:static">
+        <div className="relative md:static overflow-x-hidden">
           {/* Mobile: Carousel with arrows */}
           <div className="md:hidden relative">
 
@@ -154,14 +154,14 @@ export default function StatsSection() {
           </div>
 
           {/* Desktop: Grid layout */}
-          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10">
+          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10 m-5">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-10 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow min-h-[180px] flex flex-col justify-center"
+                className="text-center p-10 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow min-h-[180px] flex flex-col justify-center min-w-0 overflow-hidden"
               >
                 {stat.value && (
-                  <div className="text-5xl md:text-6xl font-black text-orange-600 mb-3 md:mb-4">
+                  <div className="text-4xl lg:text-5xl font-black text-orange-600 mb-3 md:mb-4 break-words">
                     {stat.value}
                   </div>
                 )}

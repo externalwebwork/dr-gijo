@@ -19,9 +19,9 @@ export default function Home() {
       <PainReliefSection />
       <SpecializedTreatmentsSection />
       <OsteoarthritisSection />
-      <TreatmentsSection />
+      {/* <TreatmentsSection />
       <AboutSection />
-      <TestimonialsSection />
+      <TestimonialsSection /> */}
       <ContactSection />
       <Footer />
     </div>
