@@ -2,7 +2,7 @@
 
 export default function PainReliefSection() {
   return (
-    <section className="py-8 lg:py-14 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="pain-relief" className="py-8 lg:py-14 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

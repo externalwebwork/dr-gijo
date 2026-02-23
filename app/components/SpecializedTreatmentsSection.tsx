@@ -37,7 +37,7 @@ export default function SpecializedTreatmentsSection() {
   ];
 
   return (
-    <section className="py-8 lg:py-14 relative overflow-hidden">
+    <section id="treatments" className="py-8 lg:py-14 relative overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

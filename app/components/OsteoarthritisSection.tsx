@@ -81,7 +81,7 @@ export default function OsteoarthritisSection() {
   ];
 
   return (
-    <section className="py-10 lg:py-12 bg-white">
+    <section id="osteoarthritis" className="py-10 lg:py-12 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
@@ -125,11 +125,11 @@ export default function OsteoarthritisSection() {
         </div>
 
         {/* Symptoms */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+        <div className="flex flex-wrap justify-center gap-8 mb-10">
           {symptoms.map((item, index) => (
             <div
               key={index}
-              className="p-6 rounded-2xl border border-gray-200 hover:border-orange-300 transition-all hover:shadow-lg"
+              className="p-6 rounded-2xl border border-gray-200 hover:border-orange-300 transition-all hover:shadow-lg w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]"
             >
 
               <h4 className="text-lg font-semibold text-gray-900 mb-2">

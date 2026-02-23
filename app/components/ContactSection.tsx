@@ -92,7 +92,7 @@ export default function ContactSection() {
                   type="submit"
                   className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 lg:py-4 rounded-lg font-bold transition-colors text-base lg:text-lg"
                 >
-                  Book Appointment - ₹300
+                  Book Appointment
                 </button>
               </form>
             </div>

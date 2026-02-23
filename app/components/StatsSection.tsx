@@ -78,7 +78,7 @@ export default function StatsSection() {
   }, [goToSlide, stats.length]);
 
   return (
-    <section className="py-12 sm:py-16 lg:py-10 bg-gray-100 overflow-x-hidden">
+    <section id="stats" className="py-12 sm:py-16 lg:py-10 bg-gray-100 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 lg:mb-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-6">
