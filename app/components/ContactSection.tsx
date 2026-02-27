@@ -88,12 +88,14 @@ export default function ContactSection() {
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 font-medium"
                 />
-                <button
-                  type="submit"
-                  className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 lg:py-4 rounded-lg font-bold transition-colors text-base lg:text-lg"
+                <a
+                  href="https://wa.me/919497884584?text=Hello%2C%20I%20would%20like%20to%20book%20an%20Ayurvedic%20spine%20consultation%20at%20your%20Kottayam%20clinic."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white py-3 lg:py-4 rounded-lg font-bold transition-colors text-base lg:text-lg"
                 >
                   Book Appointment
-                </button>
+                </a>
               </form>
             </div>
           </div>

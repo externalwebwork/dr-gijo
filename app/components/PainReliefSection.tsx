@@ -2,7 +2,7 @@
 
 export default function PainReliefSection() {
   return (
-    <section id="pain-relief" className="py-8 lg:py-14 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="pain-relief" className="py-8 lg:py-14 bg-[#f4e7fa] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -63,7 +63,7 @@ export default function PainReliefSection() {
             </div>
 
             {/* CTA Button */}
-            <div className="pt-4">
+            <div className="pt-4 flex justify-center lg:justify-start">
               <a
                 href="tel:+919876543210"
                 className="inline-flex items-center justify-center gap-3 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 sm:px-10 sm:py-5 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 group"

@@ -204,21 +204,19 @@ export default function SpecializedTreatmentsSection() {
               </h3>
 
               <p className="text-gray-600 leading-relaxed mb-4">
-                We do not believe in one-size-fits-all treatment packages. At
-                our Panchakarma clinic, experienced doctors carefully evaluate
-                your Dosha balance, the severity of your condition, and your
-                daily lifestyle before recommending therapies.
+                We don&apos;t believe in one-size-fits-all care. Our doctors
+                assess your Dosha, condition, and lifestyle before recommending
+                treatment.
               </p>
 
               <p className="text-gray-600 leading-relaxed">
-                This personalized approach helps you achieve faster relief and
-                long-term recovery by focusing only on the treatments your body
-                truly needs.
+                This personalized approach ensures faster relief and long-term
+                recovery.
               </p>
             </div>
 
             {/* Right CTA Card */}
-            
+
             <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-6 lg:p-8 text-white shadow-xl flex flex-col items-center justify-center text-center max-w-md mx-auto w-full">
               <h4 className="text-xl lg:text-2xl font-semibold mb-6">
                 Book Your Consultation
