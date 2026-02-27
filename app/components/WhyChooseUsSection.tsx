@@ -56,10 +56,8 @@ export default function WhyChooseUsSection() {
   return (
     <section
       id="why-choose-us"
-      className="py-8 lg:py-24 bg-white relative overflow-hidden"
+      className="py-8 lg:py-14 bg-[#f4e7fa] relative overflow-hidden"
     >
-      {/* Background accent */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -121,22 +119,17 @@ export default function WhyChooseUsSection() {
                 key={index}
                 className={index === 4 ? "col-span-2" : ""}
               >
-                  <div className="h-full rounded-2xl bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100 p-6 lg:p-8 shadow-lg shadow-orange-100/30 hover:shadow-xl hover:shadow-orange-100/40 transition-all duration-300 hover:border-orange-200">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-orange-500/30">
-                        {index + 1}
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
-                          {benefit.title}
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed text-base lg:text-lg">
-                          {benefit.description}
-                        </p>
-                      </div>
-                    </div>
+                <div className="h-full rounded-2xl bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100 p-6 lg:p-8 shadow-lg shadow-orange-100/30 hover:shadow-xl hover:shadow-orange-100/40 transition-all duration-300 hover:border-orange-200 flex items-center justify-center">
+                  <div className="max-w-xl text-center">
+                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-base lg:text-lg">
+                      {benefit.description}
+                    </p>
                   </div>
                 </div>
+              </div>
             ))}
           </div>
         </div>
