@@ -25,7 +25,7 @@ export default function SpecializedTreatmentsSection() {
       feeling: "Systematic, medicated massage by trained therapists.",
       benefit:
         'Flushes out toxins and reduces the "morning stiffness" that slows you down.',
-      image: "/abhyanga.jpg",
+      image: "/abhyanga2.jpg",
     },
     {
       name: "Basti (Panchakarma)",

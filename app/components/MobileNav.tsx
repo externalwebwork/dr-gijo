@@ -9,8 +9,8 @@ export default function MobileNav() {
     { href: "#home", label: "Home" },
     { href: "#treatments", label: "Treatment" },
     { href: "#why-choose-us", label: "Why Choose Us" },
-    { href: "#contact", label: "Contact" },
     { href: "#faq", label: "FAQ" },
+    { href: "#contact", label: "Contact" },
   ];
 
   const handleLinkClick = () => setIsOpen(false);

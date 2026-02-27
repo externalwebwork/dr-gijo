@@ -84,7 +84,7 @@ export default function WhyChooseUsSection() {
                 key={index}
                 className="flex-shrink-0 w-[85vw] max-w-sm snap-center snap-always"
               >
-                <div className="h-full rounded-2xl bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100 p-6 shadow-lg shadow-orange-100/50 text-center flex flex-col items-center justify-center">
+                <div className="h-full rounded-2xl bg-gradient-to-br from-white to-[#f8f0fc] border border-purple-100 p-6 shadow-lg shadow-purple-100/50 text-center flex flex-col items-center justify-center">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {benefit.title}
                   </h3>
@@ -119,7 +119,7 @@ export default function WhyChooseUsSection() {
                 key={index}
                 className={index === 4 ? "col-span-2" : ""}
               >
-                <div className="h-full rounded-2xl bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100 p-6 lg:p-8 shadow-lg shadow-orange-100/30 hover:shadow-xl hover:shadow-orange-100/40 transition-all duration-300 hover:border-orange-200 flex items-center justify-center">
+                <div className="h-full rounded-2xl bg-gradient-to-br from-white to-[#f8f0fc] border border-purple-100 p-6 lg:p-8 shadow-lg shadow-purple-100/30 hover:shadow-xl hover:shadow-purple-100/40 transition-all duration-300 hover:border-purple-200 flex items-center justify-center">
                   <div className="max-w-xl text-center">
                     <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
                       {benefit.title}
