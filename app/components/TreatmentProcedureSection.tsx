@@ -63,7 +63,7 @@ export default function TreatmentProcedureSection() {
         {/* Steps - zigzag timeline layout */}
         <div className="relative">
           {/* Vertical timeline line - desktop */}
-          <div className="hidden lg:block absolute left-1/2 top-12 bottom-12 w-0.5 bg-gradient-to-b from-orange-300 via-orange-400 to-orange-300 -translate-x-1/2 rounded-full" />
+          <div className="hidden lg:block absolute left-1/2 top-12 bottom-12 w-0.5 bg-[#652576] -translate-x-1/2 rounded-full" />
 
           <div className="space-y-6 lg:space-y-0">
             {steps.map((step, index) => {
@@ -86,7 +86,7 @@ export default function TreatmentProcedureSection() {
                         isLeft ? "lg:mx-0 lg:ml-auto" : "lg:mx-0 lg:mr-auto"
                       }`}
                     >
-                      <span className="inline-block text-orange-600 font-bold text-sm uppercase tracking-wider mb-2">
+                      <span className="inline-block text-[#652576] font-bold text-sm uppercase tracking-wider mb-2">
                         Step {step.number}
                       </span>
                       <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
@@ -100,7 +100,7 @@ export default function TreatmentProcedureSection() {
 
                   {/* Step number - absolutely centered on desktop so it always sits on timeline */}
                   <div className="order-1 lg:order-none flex justify-center lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:z-10">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-orange-500/30 ring-4 ring-white">
+                    <div className="w-14 h-14 rounded-2xl bg-[#652576] flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-orange-500/30 ring-4 ring-white">
                       {step.number}
                     </div>
                   </div>

@@ -102,8 +102,8 @@ export default function WhyChooseUsSection() {
                 onClick={() => scrollToIndex(index)}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                   activeIndex === index
-                    ? "bg-orange-500 w-6"
-                    : "bg-gray-300 hover:bg-gray-400"
+                    ? "bg-[#652576] w-6"
+                    : "bg-[#652576] hover:bg-gray-400"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
