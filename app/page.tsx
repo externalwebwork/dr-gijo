@@ -2,6 +2,8 @@ import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
 import StatsSection from "./components/StatsSection";
 import OsteoarthritisSection from "./components/OsteoarthritisSection";
+import TreatmentProcedureSection from "./components/TreatmentProcedureSection";
+import WhyChooseUsSection from "./components/WhyChooseUsSection";
 import TreatmentsSection from "./components/TreatmentsSection";
 import AboutSection from "./components/AboutSection";
 import TestimonialsSection from "./components/TestimonialsSection";
@@ -20,6 +22,8 @@ export default function Home() {
       <PainReliefSection />
       <SpecializedTreatmentsSection />
       <OsteoarthritisSection />
+      <TreatmentProcedureSection />
+      <WhyChooseUsSection />
       {/* <TreatmentsSection />
       <AboutSection />
       <TestimonialsSection /> */}
