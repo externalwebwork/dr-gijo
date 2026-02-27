@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Prevent Next.js from treating the Desktop folder as the workspace root
-  // when it finds another package-lock.json above this project.
-  outputFileTracingRoot: "C:\\Users\\dell\\Desktop\\kooplicat",
+  // Use the current working directory as the tracing root.
+  // This is absolute in both local dev and on Vercel.
+  outputFileTracingRoot: process.cwd(),
 };
 
 export default nextConfig;
