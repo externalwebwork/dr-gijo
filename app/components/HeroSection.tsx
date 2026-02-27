@@ -19,10 +19,10 @@ export default function HeroSection() {
           <div className="lg:pl-6 order-2">
             <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 lg:p-8 border border-gray-100">
               <div className="text-center mb-4 lg:mb-6">
-                <h2 className="text-xl sm:text-2xl lg:text-5xl font-bold text-gray-900 mb-1 sm:mb-2">
+                <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-1 sm:mb-2">
                   Book Appointment
                 </h2>
-                <p className="text-base sm:text-lg lg:text-3xl font-semibold text-gray-800">
+                <p className="text-sm sm:text-base lg:text-2xl font-semibold text-gray-800">
                   Consultation at{" "}
                   <span className="text-orange-600 font-bold">Rs. 300/-</span>
                 </p>
@@ -101,11 +101,11 @@ export default function HeroSection() {
             </div>
 
             <div className="space-y-3 sm:space-y-4">
-              <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex items-start gap-3 sm:gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-green-100 rounded-2xl flex items-center justify-center">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-14 lg:h-14 bg-green-100 rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 lg:w-8 lg:h-8 text-green-600"
+                      className="w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 text-green-600"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -119,16 +119,16 @@ export default function HeroSection() {
                     </svg>
                   </div>
                 </div>
-                <p className="text-black font-black text-lg lg:text-3xl min-w-0 flex items-center leading-tight">
+                <p className="text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 flex items-center leading-snug">
                   Physical Exam by Senior BAMS/MD Doctors
                 </p>
               </div>
 
-              <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex items-start gap-3 sm:gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-green-100 rounded-2xl flex items-center justify-center">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-14 lg:h-14 bg-green-100 rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 lg:w-8 lg:h-8 text-green-600"
+                      className="w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 text-green-600"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -142,16 +142,16 @@ export default function HeroSection() {
                     </svg>
                   </div>
                 </div>
-                <p className="text-black font-black text-lg lg:text-3xl min-w-0 flex items-center leading-tight">
+                <p className="text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 flex items-center leading-snug">
                   Authentic Nadi Pariksha (Pulse Diagnosis)
                 </p>
               </div>
 
-              <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex items-start gap-3 sm:gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-green-100 rounded-2xl flex items-center justify-center">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-14 lg:h-14 bg-green-100 rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 lg:w-8 lg:h-8 text-green-600"
+                      className="w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 text-green-600"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -165,7 +165,7 @@ export default function HeroSection() {
                     </svg>
                   </div>
                 </div>
-                <p className="text-black font-black text-lg lg:text-3xl min-w-0 flex items-center leading-tight">
+                <p className="text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 flex items-center leading-snug">
                   100% Natural Medicines
                 </p>
               </div>
@@ -174,7 +174,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-3 pt-2">
               <a
                 href="tel:+919876543210"
-                className="inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
+                className="inline-flex items-center justify-center gap-2 bg-[#78328d] hover:bg-[#652576] text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
               >
                 <svg
                   className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
@@ -192,7 +192,7 @@ export default function HeroSection() {
                 <span className="truncate">Call Now</span>
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20book%20an%20Ayurvedic%20spine%20consultation%20at%20your%20Kottayam%20clinic."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"

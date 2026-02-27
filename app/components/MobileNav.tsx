@@ -71,7 +71,7 @@ export default function MobileNav() {
               +91 9497884584
             </a>
             <a
-              href="https://wa.me/919497884584"
+              href="https://wa.me/919497884584?text=Hello%2C%20I%20would%20like%20to%20book%20an%20Ayurvedic%20spine%20consultation%20at%20your%20Kottayam%20clinic."
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLinkClick}

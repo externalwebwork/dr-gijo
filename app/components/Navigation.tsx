@@ -74,7 +74,7 @@ export default function Navigation() {
               +91 9497884584
             </a>
             <a
-              href="https://wa.me/919497884584"
+              href="https://wa.me/919497884584?text=Hello%2C%20I%20would%20like%20to%20book%20an%20Ayurvedic%20spine%20consultation%20at%20your%20Kottayam%20clinic."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-xl text-base font-bold transition-all hover:shadow-lg hover:-translate-y-0.5"

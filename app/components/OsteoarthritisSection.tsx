@@ -81,20 +81,22 @@ export default function OsteoarthritisSection() {
   ];
 
   return (
-    <section id="osteoarthritis" className="py-10 lg:py-12 bg-white overflow-x-hidden">
+    <section
+      id="osteoarthritis"
+      className="py-10 lg:py-12 bg-white overflow-x-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
             Is Your Back Pain Related to
             <span className="block text-orange-600 mt-2">Osteoarthritis?</span>
           </h2>
 
           <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
-            Osteoarthritis in the spine can cause chronic pain, stiffness, and
-            nerve discomfort. Recognizing symptoms early helps you begin
-            effective natural treatment.
+            Spinal osteoarthritis can cause pain, stiffness, and nerve
+            discomfort. Early diagnosis helps you start effective natural
+            treatment.
           </p>
         </div>
 
@@ -106,11 +108,8 @@ export default function OsteoarthritisSection() {
             </h3>
 
             <p className="text-gray-600 leading-relaxed text-lg lg:text-[1.5rem]">
-              The lumbar spine supports most of your body weight. Over time,
-              cartilage degeneration can cause bones to rub together, leading to
-              inflammation, nerve pressure, and mobility problems. Proper
-              diagnosis and holistic treatment can significantly improve quality
-              of life.
+              Cartilage wear in the lower spine can cause pain and stiffness.
+              Early diagnosis and holistic care improve mobility and comfort.
             </p>
           </div>
 
@@ -131,7 +130,6 @@ export default function OsteoarthritisSection() {
               key={index}
               className="p-6 rounded-2xl border border-gray-200 hover:border-orange-300 transition-all hover:shadow-lg w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]"
             >
-
               <h4 className="text-lg font-semibold text-gray-900 mb-2">
                 {item.title}
               </h4>
@@ -162,9 +160,14 @@ export default function OsteoarthritisSection() {
               Call Now
             </a>
 
-            <button className="border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-orange-600 transition">
+            <a
+              href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20book%20an%20Ayurvedic%20spine%20consultation%20at%20your%20Kottayam%20clinic."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-orange-600 transition"
+            >
               Book Appointment
-            </button>
+            </a>
           </div>
         </div>
       </div>
