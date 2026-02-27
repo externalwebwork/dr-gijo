@@ -7,10 +7,10 @@ export default function MobileNav() {
 
   const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#treatments", label: "Treatments" },
-    { href: "#testimonials", label: "Testimonials" },
+    { href: "#treatments", label: "Treatment" },
+    { href: "#why-choose-us", label: "Why Choose Us" },
     { href: "#contact", label: "Contact" },
+    { href: "#faq", label: "FAQ" },
   ];
 
   const handleLinkClick = () => setIsOpen(false);

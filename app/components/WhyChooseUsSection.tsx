@@ -138,7 +138,7 @@ export default function WhyChooseUsSection() {
         <div className="mt-12 lg:mt-16 text-center">
           <a
             href="tel:+919876543210"
-            className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-orange-600 text-white font-semibold text-lg hover:bg-orange-700 transition-colors shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/30"
+            className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-[#652576] text-white font-semibold text-lg hover:bg-[#4f1f5d] transition-colors shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/30"
           >
             Book Your Consultation
           </a>

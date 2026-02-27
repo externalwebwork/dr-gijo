@@ -49,7 +49,7 @@ export default function SpecializedTreatmentsSection() {
         {/* Section Header */}
         <div className="text-center mb-8">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Specialized Ayurvedic Spine Treatment for Long-Term Relief
+            Specialized Ayurvedic Spine Treatment
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Instead of just masking pain, our specialized treatments work to
@@ -216,15 +216,15 @@ export default function SpecializedTreatmentsSection() {
             </div>
 
             {/* Right CTA Card */}
-
-            <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-6 lg:p-8 text-white shadow-xl flex flex-col items-center justify-center text-center max-w-md mx-auto w-full">
+            
+            <div className="bg-gradient-to-br from-[#652576] to-[#78328d] rounded-2xl p-6 lg:p-8 text-white shadow-xl flex flex-col items-center justify-center text-center max-w-md mx-auto w-full">
               <h4 className="text-xl lg:text-2xl font-semibold mb-6">
                 Book Your Consultation
               </h4>
 
               <a
                 href="tel:+919876543210"
-                className="flex items-center justify-center gap-2 bg-white text-emerald-700 px-7 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 w-full sm:w-auto"
+                className="flex items-center justify-center gap-2 bg-white text-[#652576] px-7 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 w-full sm:w-auto"
               >
                 Call Now
               </a>

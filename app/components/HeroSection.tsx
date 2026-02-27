@@ -76,7 +76,7 @@ export default function HeroSection() {
 
                 <button
                   type="submit"
-                  className="w-full bg-orange-600 hover:bg-orange-700 text-white py-4 lg:py-5 rounded-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 text-lg lg:text-xl"
+                  className="w-full bg-[#652576] hover:bg-[#4f1f5d] text-white py-4 lg:py-5 rounded-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 text-lg lg:text-xl"
                 >
                   Check Availability
                 </button>
@@ -103,9 +103,9 @@ export default function HeroSection() {
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-14 lg:h-14 bg-green-100 rounded-2xl flex items-center justify-center">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 bg-green-100 rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 text-green-600"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -119,16 +119,16 @@ export default function HeroSection() {
                     </svg>
                   </div>
                 </div>
-                <p className="text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 flex items-center leading-snug">
+                <p className="md:mt-1 text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 leading-snug">
                   Physical Exam by Senior BAMS/MD Doctors
                 </p>
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-14 lg:h-14 bg-green-100 rounded-2xl flex items-center justify-center">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 bg-green-100 rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 text-green-600"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -142,16 +142,16 @@ export default function HeroSection() {
                     </svg>
                   </div>
                 </div>
-                <p className="text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 flex items-center leading-snug">
+                <p className="md:mt-1 text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 leading-snug">
                   Authentic Nadi Pariksha (Pulse Diagnosis)
                 </p>
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-14 lg:h-14 bg-green-100 rounded-2xl flex items-center justify-center">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 bg-green-100 rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 text-green-600"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -165,7 +165,7 @@ export default function HeroSection() {
                     </svg>
                   </div>
                 </div>
-                <p className="text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 flex items-center leading-snug">
+                <p className="md:mt-1 text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 leading-snug">
                   100% Natural Medicines
                 </p>
               </div>
@@ -174,7 +174,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-3 pt-2">
               <a
                 href="tel:+919876543210"
-                className="inline-flex items-center justify-center gap-2 bg-[#78328d] hover:bg-[#652576] text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
+                className="inline-flex items-center justify-center gap-2 bg-[#652576] hover:bg-[#4f1f5d] text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
               >
                 <svg
                   className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"

@@ -66,7 +66,7 @@ export default function PainReliefSection() {
             <div className="pt-4 flex justify-center lg:justify-start">
               <a
                 href="tel:+919876543210"
-                className="inline-flex items-center justify-center gap-3 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 sm:px-10 sm:py-5 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 group"
+                className="inline-flex items-center justify-center gap-3 bg-[#652576] hover:bg-[#4f1f5d] text-white px-8 py-4 sm:px-10 sm:py-5 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 group"
               >
                 <svg
                   className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:scale-110"

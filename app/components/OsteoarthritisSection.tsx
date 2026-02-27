@@ -142,12 +142,12 @@ export default function OsteoarthritisSection() {
         </div>
 
         {/* CTA */}
-        <div className="bg-orange-600 rounded-3xl px-10 py-8  text-center text-white">
+        <div className="bg-[#652576] rounded-3xl px-10 py-8  text-center text-white">
           <h3 className="text-2xl lg:text-4xl font-semibold mb-4">
             Start Your Natural Healing Journey Today
           </h3>
 
-          <p className="text-orange-100 max-w-2xl mx-auto mb-2">
+          <p className="text-purple-100 max-w-2xl mx-auto mb-2">
             Our Ayurvedic specialists provide personalized treatments that
             target the root cause of osteoarthritis pain — without surgery.
           </p>
@@ -155,7 +155,7 @@ export default function OsteoarthritisSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+919876543210"
-              className="bg-white text-orange-600 px-8 py-4 rounded-xl font-semibold hover:bg-orange-50 transition"
+              className="bg-white text-[#652576] px-8 py-4 rounded-xl font-semibold hover:bg-purple-50 transition"
             >
               Call Now
             </a>
@@ -164,7 +164,7 @@ export default function OsteoarthritisSection() {
               href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20book%20an%20Ayurvedic%20spine%20consultation%20at%20your%20Kottayam%20clinic."
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-orange-600 transition"
+              className="border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#652576] transition"
             >
               Book Appointment
             </a>
