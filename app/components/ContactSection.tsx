@@ -76,13 +76,6 @@ export default function ContactSection() {
                   placeholder="Phone Number"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 font-medium"
                 />
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 font-medium">
-                  <option>Select Treatment</option>
-                  <option>Spine Care</option>
-                  <option>Back Pain</option>
-                  <option>Neck Pain</option>
-                  <option>Joint Pain</option>
-                </select>
                 <textarea
                   placeholder="Tell us about your condition..."
                   rows={4}
