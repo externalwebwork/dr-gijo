@@ -40,28 +40,28 @@ export default function Navigation() {
               Home
             </a>
             <a
-              href="#about"
-              className="text-gray-600 hover:text-orange-600 font-medium transition-colors text-base"
-            >
-              About
-            </a>
-            <a
               href="#treatments"
               className="text-gray-600 hover:text-orange-600 font-medium transition-colors text-base"
             >
-              Treatments
+              Treatment
             </a>
             <a
-              href="#testimonials"
+              href="#why-choose-us"
               className="text-gray-600 hover:text-orange-600 font-medium transition-colors text-base"
             >
-              Testimonials
+              Why Choose Us
             </a>
             <a
               href="#contact"
               className="text-gray-600 hover:text-orange-600 font-medium transition-colors text-base"
             >
               Contact
+            </a>
+            <a
+              href="#faq"
+              className="text-gray-600 hover:text-orange-600 font-medium transition-colors text-base"
+            >
+              FAQ
             </a>
           </div>
 
@@ -77,7 +77,7 @@ export default function Navigation() {
               href="https://wa.me/919497884584?text=Hello%2C%20I%20would%20like%20to%20book%20an%20Ayurvedic%20spine%20consultation%20at%20your%20Kottayam%20clinic."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-xl text-base font-bold transition-all hover:shadow-lg hover:-translate-y-0.5"
+              className="bg-[#652576] hover:bg-[#4f1f5d] text-white px-8 py-3 rounded-xl text-base font-bold transition-all hover:shadow-lg hover:-translate-y-0.5"
             >
               Book Appointment
             </a>
