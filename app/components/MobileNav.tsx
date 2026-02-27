@@ -75,7 +75,7 @@ export default function MobileNav() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLinkClick}
-              className="flex items-center justify-center gap-2 w-full bg-orange-600 hover:bg-orange-700 text-white py-3 px-4 rounded-xl font-bold text-base transition-colors"
+              className="flex items-center justify-center gap-2 w-full bg-[#652576] hover:bg-[#4f1f5d] text-white py-3 px-4 rounded-xl font-bold text-base transition-colors"
             >
               Book Appointment
             </a>
