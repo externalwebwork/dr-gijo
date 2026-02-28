@@ -12,11 +12,11 @@ export default function StatsSection() {
   const resumeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const stats = [
-    { value: "25+", label: "Years Experience" },
-    { value: "40000+", label: "Happy Patients" },
-    { value: "", label: "Panchakarma Specialists", icon: "/CGHS-hospital.png" },
-    { value: "", label: "Personalized Treatment Plans", icon: "/NABH.png" },
-    { value: "100+", label: "Treatments" },
+    { value: "12+", label: "Years of Dentistry" },
+    { value: "10,000+", label: "Root Canal Cases" },
+    { value: "B.D.S, M.D.S", label: "Microscopic Root Canal Specialist", sublabel: "Dentist" },
+    { value: "", label: "Modern Microscopic Equipment & Techniques" },
+    { value: "", label: "Root Canal Treatment Specialist (Endodontists)" },
   ];
 
   const goToSlide = useCallback((index: number) => {
@@ -78,15 +78,14 @@ export default function StatsSection() {
   }, [goToSlide, stats.length]);
 
   return (
-    <section id="stats" className="py-12 sm:py-16 lg:py-10 bg-gray-100 overflow-x-hidden">
+    <section id="stats" className="py-12 sm:py-16 lg:py-10 bg-[#F4F6F7] overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12 lg:mb-2">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-6">
-            Trusted by Thousands of Patients
+        <div className="text-center mb-8 sm:mb-10 lg:mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#2E86C1] mb-2 sm:mb-3">
+            Trusted Root Canal Expertise
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto font-medium px-1">
-            Our commitment to authentic Ayurvedic healing has made us
-            Kerala&apos;s preferred spine care destination
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-medium">
+            Advanced microscopic root canal treatment by qualified Endodontists
           </p>
         </div>
 
@@ -110,25 +109,19 @@ export default function StatsSection() {
                   key={index}
                   ref={(el) => { cardRefs.current[index] = el; }}
                   data-slide
-                  className="text-center p-6 sm:p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 min-h-[180px] flex flex-col justify-center flex-shrink-0 w-[82vw] sm:w-[72vw] snap-center touch-manipulation select-none"
+                  className="text-center p-6 sm:p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 min-h-[200px] flex flex-col justify-center items-center gap-2 flex-shrink-0 w-[82vw] sm:w-[72vw] snap-center touch-manipulation select-none border border-gray-100"
                 >
                   {stat.value && (
-                    <div className="text-4xl sm:text-5xl font-black text-orange-600 mb-2 sm:mb-3">
+                    <div className="text-3xl sm:text-4xl font-black text-[#2E86C1] leading-tight">
                       {stat.value}
                     </div>
                   )}
-                  {stat.icon && (
-                    <div className="sm:mb-4 flex justify-center">
-                      <img
-                        src={stat.icon}
-                        alt={stat.label}
-                        className="w-12 h-12 sm:w-20 sm:h-20 object-contain"
-                      />
-                    </div>
-                  )}
-                  <div className="text-gray-700 font-bold text-sm sm:text-base leading-tight">
+                  <div className={`text-gray-700 font-bold leading-snug ${stat.value ? "text-sm sm:text-base" : "text-base sm:text-lg px-2"}`}>
                     {stat.label}
                   </div>
+                  {'sublabel' in stat && (
+                    <div className="text-gray-500 font-medium text-xs sm:text-sm">{stat.sublabel}</div>
+                  )}
                 </div>
               ))}
             </div>
@@ -143,40 +136,34 @@ export default function StatsSection() {
                   aria-label={`Go to slide ${index + 1}`}
                   aria-selected={activeIndex === index}
                   role="tab"
-                  className={`h-2 rounded-full transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 ${
-                    activeIndex === index
-                      ? 'w-8 bg-orange-500'
-                      : 'w-2 bg-gray-300 hover:bg-gray-400'
-                  }`}
+                    className={`h-2 rounded-full transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2E86C1] focus-visible:ring-offset-2 ${
+                      activeIndex === index
+                        ? 'w-8 bg-[#2E86C1]'
+                        : 'w-2 bg-gray-300 hover:bg-gray-400'
+                    }`}
                 />
               ))}
             </div>
           </div>
 
           {/* Desktop: Grid layout */}
-          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10 m-5">
+          <div className="hidden md:grid md:grid-cols-2 lg:pb-2 lg:px-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-6">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-10 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow min-h-[180px] flex flex-col justify-center min-w-0 overflow-hidden"
+                className="flex flex-col items-center justify-center text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 min-h-[200px] border border-gray-100"
               >
                 {stat.value && (
-                  <div className="text-4xl lg:text-5xl font-black text-orange-600 mb-3 md:mb-4 break-words">
+                  <div className="text-3xl xl:text-4xl font-black text-[#2E86C1] leading-tight mb-2 break-words">
                     {stat.value}
                   </div>
                 )}
-                {stat.icon && (
-                  <div className="mb-4 flex justify-center">
-                    <img
-                      src={stat.icon}
-                      alt={stat.label}
-                      className="w-14 h-14 object-contain"
-                    />
-                  </div>
-                )}
-                <div className="text-gray-700 font-bold text-lg leading-tight">
+                <div className={`text-gray-700 font-bold leading-snug ${stat.value ? "text-base" : "text-lg xl:text-xl px-1"}`}>
                   {stat.label}
                 </div>
+                {'sublabel' in stat && (
+                  <div className="text-gray-500 font-medium text-sm mt-1">{stat.sublabel}</div>
+                )}
               </div>
             ))}
           </div>

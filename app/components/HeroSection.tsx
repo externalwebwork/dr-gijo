@@ -4,79 +4,76 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="pt-16 sm:pt-20 lg:min-h-screen bg-gradient-to-br from-orange-50 via-white to-white relative overflow-hidden"
+      className="pt-16 sm:pt-20 lg:min-h-screen relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url(/hero-bg.png)" }}
     >
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <img
-          src="/main.png"
-          alt="Ayurvedic background"
-          className="w-full h-full object-cover"
-        />
-      </div>
+      <div className="absolute inset-0 z-0 pointer-events-none bg-white/40" aria-hidden="true" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-start lg:items-center">
           {/* Booking Form - Second on mobile, right column on desktop */}
-          <div className="lg:pl-6 order-2">
-            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 lg:p-8 border border-gray-100">
-              <div className="text-center mb-4 lg:mb-6">
-                <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-1 sm:mb-2">
+          <div className="lg:pl-6 order-2 lg:flex lg:items-center lg:min-h-0">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 lg:p-6 lg:py-8 border border-gray-100 w-full">
+              <div className="text-center mb-3 lg:mb-5">
+                <h2 className="text-2xl sm:text-3xl lg:text-2xl font-bold text-gray-900">
                   Book Appointment
                 </h2>
-                <p className="text-sm sm:text-base lg:text-2xl font-semibold text-gray-800">
-                  Consultation at{" "}
-                  <span className="text-orange-600 font-bold">Rs. 300/-</span>
-                </p>
               </div>
 
-              <form className="space-y-4">
+              <form className="space-y-3 lg:space-y-4">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm lg:text-base font-bold text-gray-700 mb-2"
-                  >
+                  <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2">
                     Full Name:
                   </label>
                   <input
                     id="name"
                     type="text"
                     placeholder="Enter your full name"
-                    className="w-full px-4 py-3 lg:py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
+                    className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
                     required
                   />
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm lg:text-base font-bold text-gray-700 mb-2"
-                  >
+                  <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2">
                     Phone Number:
                   </label>
                   <input
                     id="phone"
                     type="tel"
-                    placeholder="Your Number.."
-                    className="w-full px-4 py-3 lg:py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
+                    placeholder="Your number"
+                    className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
                     required
                   />
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="date"
-                    className="block text-sm lg:text-base font-bold text-gray-700 mb-2"
+                  <label htmlFor="consult-mode" className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2">
+                    Online / Offline:
+                  </label>
+                  <select
+                    id="consult-mode"
+                    className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium bg-white"
+                    required
                   >
-                    Day of visit:
+                    <option value="">Select</option>
+                    <option value="online">Online</option>
+                    <option value="offline">Offline</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="date" className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2">
+                    Date of Consultation:
                   </label>
                   <DateInput
                     id="date"
-                    className="w-full px-4 py-3 lg:py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm lg:text-base font-medium"
+                    className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#652576] hover:bg-[#4f1f5d] text-white py-4 lg:py-5 rounded-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 text-lg lg:text-xl"
+                  className="w-full bg-[#2E86C1] hover:bg-[#2574a8] text-white py-3 lg:py-4 rounded-lg font-bold transition-all hover:shadow-lg hover:-translate-y-0.5 text-base lg:text-base mt-2"
                 >
                   Check Availability
                 </button>
@@ -85,96 +82,26 @@ export default function HeroSection() {
           </div>
 
           {/* Left Content - First on mobile, left column on desktop */}
-          <div className="space-y-4 sm:space-y-6 order-1 lg:flex lg:flex-col lg:justify-center">
-            <div className="space-y-3 sm:space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-8xl xl:text-9xl font-black text-gray-900 leading-[1.1] tracking-tight text-center">
-                Stop &quot;Managing&quot; Your Back Pain
+          <div className="space-y-4 sm:space-y-6 order-1 lg:flex lg:flex-col lg:justify-center min-w-0 overflow-hidden">
+            <div className="space-y-3 sm:space-y-4 min-w-0 max-w-full">
+              <h1 className="hero-title text-4xl sm:text-5xl font-black text-[#2E86C1] leading-[1.15] tracking-tight text-center lg:text-left break-words">
+                Tooth pain keeping you awake?
                 <br />
-                <span className="text-orange-600 font-black">
-                  Start Healing It.
+                <span className="text-gray-800 font-black">
+                  Get fast, painless relief.
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl lg:text-3xl xl:text-4xl text-gray-600 leading-relaxed max-w-2xl font-medium text-center mx-auto">
-                Experience Kerala&apos;s most trusted Ayurvedic Spine Care. No
-                surgery, no heavy sedation.
+              <p className="hero-description text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl lg:max-w-full font-medium text-center lg:text-left lg:mx-0 mx-auto break-words">
+                Best dental clinic in Thodupuzha offering Painless microscopic root canal treatment.
+                <br className="hidden sm:block" />
+                Advanced microscopic root canal treatment specialist available at Dental Solutions Thodupuzha
               </p>
-            </div>
-
-            <div className="space-y-3 sm:space-y-4">
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-7 h-7 sm:w-9 sm:h-9 bg-green-100 rounded-2xl flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <p className="md:mt-1 text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 leading-snug">
-                  Physical Exam by Senior BAMS/MD Doctors
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-7 h-7 sm:w-9 sm:h-9 bg-green-100 rounded-2xl flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <p className="md:mt-1 text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 leading-snug">
-                  Authentic Nadi Pariksha (Pulse Diagnosis)
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-7 h-7 sm:w-9 sm:h-9 bg-green-100 rounded-2xl flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <p className="md:mt-1 text-black font-semibold text-base sm:text-lg lg:text-2xl min-w-0 leading-snug">
-                  100% Natural Medicines
-                </p>
-              </div>
             </div>
 
             <div className="flex flex-wrap gap-3 pt-2">
               <a
-                href="tel:+919876543210"
-                className="inline-flex items-center justify-center gap-2 bg-[#652576] hover:bg-[#4f1f5d] text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
+                href="tel:+919497884584"
+                className="inline-flex items-center justify-center gap-2 bg-[#2E86C1] hover:bg-[#2574a8] text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
               >
                 <svg
                   className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
@@ -192,7 +119,7 @@ export default function HeroSection() {
                 <span className="truncate">Call Now</span>
               </a>
               <a
-                href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20book%20an%20Ayurvedic%20spine%20consultation%20at%20your%20Kottayam%20clinic."
+                href="https://wa.me/919497884584?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"

@@ -10,34 +10,34 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://spinecare.kooplicatayurveda"),
-  title: "Ayurvedic Clinic in Kottayam | Spine Care & Back Pain",
+  metadataBase: new URL("https://smiledental.com"),
+  title: "Dental Clinic in Kottayam | Family Dental Care | Smile Dental",
   description:
-    "Kerala's trusted Ayurvedic spine clinic in Kottayam. Non-surgical back pain relief with Panchakarma, Nadi Pariksha, and personalized Ayurvedic treatments by BAMS/MD doctors.",
+    "Trusted family dental clinic in Kottayam. Quality dental care including cleanings, fillings, root canal, teeth whitening, and more. Book your appointment today.",
   keywords: [
-    "Ayurvedic clinic Kottayam",
-    "Ayurvedic spine care",
-    "back pain treatment Kottayam",
-    "Panchakarma Kottayam",
-    "Ayurvedic back pain relief",
-    "osteoporosis ayurveda",
-    "herniated disc ayurveda",
+    "dental clinic Kottayam",
+    "family dentist Kottayam",
+    "dental care Kottayam",
+    "teeth cleaning Kottayam",
+    "root canal Kottayam",
+    "teeth whitening Kottayam",
+    "dental fillings Kottayam",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Ayurvedic Spine Care in Kottayam | Kooplicat Ayurveda Hospital",
+    title: "Smile Dental | Family Dental Clinic in Kottayam",
     description:
-      "Specialized Ayurvedic treatment for chronic back pain, disc problems, and spinal osteoarthritis in Kottayam with authentic Kerala Panchakarma.",
+      "Quality dental care for the whole family. Cleanings, fillings, root canal, teeth whitening, and comprehensive dental services in Kottayam.",
     type: "website",
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ayurvedic Clinic in Kottayam | Spine Care & Back Pain",
+    title: "Dental Clinic in Kottayam | Smile Dental",
     description:
-      "Non-surgical Ayurvedic spine care in Kottayam with Panchakarma, Nadi Pariksha, and personalized back pain treatment plans.",
+      "Trusted family dental clinic offering comprehensive care including cleanings, fillings, root canal, and teeth whitening.",
   },
   icons: {
     icon: [

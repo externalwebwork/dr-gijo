@@ -4,29 +4,34 @@ import { useState, useRef } from "react";
 
 const benefits = [
   {
-    title: "Experienced Ayurvedic Doctors",
+    title: "Expert Specialists",
     description:
-      "We are highly qualified BAMS and MD Ayurveda practitioners with over 20 years in treating spinal disorders.",
+      "Highly qualified dentists with advanced training and years of experience in complex procedures.",
   },
   {
-    title: "Authentic Kerala Panchakarma",
+    title: "Flexible Scheduling",
     description:
-      "We follow traditional Kerala Panchakarma protocols using genuine techniques passed down through generations.",
+      "Convenient appointment times including evenings and weekends to fit your busy lifestyle.",
   },
   {
-    title: "Internal + External Therapies",
+    title: "Advanced Safety",
     description:
-      "Comprehensive approach combining external therapies (Kati Basti, Abhyanga) with internal medicines for complete healing.",
+      "Strict sterilization protocols and state-of-the-art equipment ensure your safety and comfort.",
   },
   {
-    title: "Holistic Healing Approach",
+    title: "Patient-Centered Care",
     description:
-      "We don't just treat symptoms - we address the root cause, balance your doshas, and restore overall health through personalized care and lifestyle guidance.",
+      "Personalized treatment plans tailored to your unique needs, goals, and budget.",
   },
   {
-    title: "Focus on Long-Term Relief",
+    title: "Latest Technology",
     description:
-      "Our goal is sustainable healing, not temporary fixes. We empower you with knowledge and practices to maintain spinal health for years to come.",
+      "Digital X-rays, laser dentistry, and 3D imaging for precise diagnosis and treatment.",
+  },
+  {
+    title: "Trusted by Thousands",
+    description:
+      "Join our family of satisfied patients who have transformed their smiles and lives.",
   },
 ];
 
@@ -56,18 +61,18 @@ export default function WhyChooseUsSection() {
   return (
     <section
       id="why-choose-us"
-      className="py-8 lg:py-14 bg-[#f4e7fa] relative overflow-hidden"
+      className="py-8 lg:py-14 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url(/section-bg.png)" }}
     >
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 bg-white/65" aria-hidden="true" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
-            Why Choose Our Panchakarma Clinic in Kottayam?
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2E86C1] leading-tight mb-4">
+            Why Choose Our Dental Solutions at Thodupuzha?
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Your trusted Ayurvedic Clinic in natural spinal health and holistic
-            wellness.
+            Experience the difference that expertise, technology, and compassionate care can make.
           </p>
         </div>
 
@@ -84,7 +89,7 @@ export default function WhyChooseUsSection() {
                 key={index}
                 className="flex-shrink-0 w-[85vw] max-w-sm snap-center snap-always"
               >
-                <div className="h-full rounded-2xl bg-gradient-to-br from-white to-[#f8f0fc] border border-purple-100 p-6 shadow-lg shadow-purple-100/50 text-center flex flex-col items-center justify-center">
+                <div className="h-full rounded-2xl bg-white border border-gray-200 p-6 shadow-lg shadow-gray-100/50 text-center flex flex-col items-center justify-center">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {benefit.title}
                   </h3>
@@ -102,8 +107,8 @@ export default function WhyChooseUsSection() {
                 onClick={() => scrollToIndex(index)}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                   activeIndex === index
-                    ? "bg-[#652576] w-6"
-                    : "bg-[#652576] hover:bg-gray-400"
+                    ? "bg-[#2E86C1] w-6"
+                    : "bg-gray-300 hover:bg-gray-400"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -111,15 +116,12 @@ export default function WhyChooseUsSection() {
           </div>
         </div>
 
-        {/* Desktop: Bento-style grid */}
+        {/* Desktop: 2 cards per row */}
         <div className="hidden lg:block">
           <div className="grid grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className={index === 4 ? "col-span-2" : ""}
-              >
-                <div className="h-full rounded-2xl bg-gradient-to-br from-white to-[#f8f0fc] border border-purple-100 p-6 lg:p-8 shadow-lg shadow-purple-100/30 hover:shadow-xl hover:shadow-purple-100/40 transition-all duration-300 hover:border-purple-200 flex items-center justify-center">
+              <div key={index}>
+                <div className="h-full rounded-2xl bg-white border border-gray-200 p-6 lg:p-8 shadow-lg shadow-gray-100/30 hover:shadow-xl hover:shadow-gray-100/40 transition-all duration-300 hover:border-[#2E86C1]/30 flex items-center justify-center">
                   <div className="max-w-xl text-center">
                     <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
                       {benefit.title}
@@ -137,8 +139,8 @@ export default function WhyChooseUsSection() {
         {/* CTA */}
         <div className="mt-12 lg:mt-16 text-center">
           <a
-            href="tel:+919876543210"
-            className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-[#652576] text-white font-semibold text-lg hover:bg-[#4f1f5d] transition-colors shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/30"
+            href="tel:+919497884584"
+            className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-[#2E86C1] text-white font-semibold text-lg hover:bg-[#2574a8] transition-colors shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30"
           >
             Book Your Consultation
           </a>

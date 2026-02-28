@@ -3,10 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-orange: #ea580c;
-  --primary-orange-dark: #c2410c;
-  --primary-orange-light: #fdba74;
-  --warm-gray: #f8fafc;
+  --primary-blue: #2E86C1;
+  --primary-blue-hover: #2574a8;
+  --secondary-white: #FFFFFF;
+  --accent-gray: #F4F6F7;
   --text-primary: #1e293b;
   --text-secondary: #64748b;
   --border-light: #e2e8f0;
@@ -41,8 +41,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(234, 88, 12, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(234, 88, 12, 0.5); }
+  0%, 100% { box-shadow: 0 0 20px rgba(46, 134, 193, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(46, 134, 193, 0.5); }
 }
 
 @keyframes slide-in-left {
@@ -90,12 +90,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-orange);
+  background: var(--primary-blue);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-orange-dark);
+  background: var(--primary-blue-hover);
 }
 
 /* Glass morphism effect */
@@ -115,7 +115,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary-orange), #f97316);
+  background: linear-gradient(135deg, var(--primary-blue), #1E90FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -123,7 +123,7 @@ body {
 
 /* Button hover effects */
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-orange), #f97316);
+  background: var(--primary-blue);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -131,7 +131,7 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3);
+  box-shadow: 0 10px 25px rgba(46, 134, 193, 0.3);
 }
 
 .btn-primary::before {
@@ -164,27 +164,67 @@ body {
   transition: all 0.3s ease;
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box,
-              linear-gradient(135deg, var(--border-light), var(--primary-orange-light)) border-box;
+              linear-gradient(135deg, var(--border-light), var(--accent-gray)) border-box;
 }
 
 .custom-input:focus {
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box,
-              linear-gradient(135deg, var(--primary-orange), var(--primary-orange-dark)) border-box;
-  box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.1);
+              linear-gradient(135deg, var(--primary-blue), var(--primary-blue-hover)) border-box;
+  box-shadow: 0 0 0 4px rgba(46, 134, 193, 0.1);
 }
 
-/* Enhanced typography with Poppins */
-.text-xs { font-size: 0.875rem; font-weight: 500; }
-.text-sm { font-size: 0.95rem; font-weight: 500; }
-.text-base { font-size: 1rem; font-weight: 400; }
-.text-lg { font-size: 1.125rem; font-weight: 500; }
-.text-xl { font-size: 1.25rem; font-weight: 500; }
-.text-2xl { font-size: 1.5rem; font-weight: 600; }
-.text-3xl { font-size: 1.875rem; font-weight: 600; }
-.text-4xl { font-size: 2.25rem; font-weight: 700; }
-.text-5xl { font-size: 3rem; font-weight: 700; }
-.text-6xl { font-size: 3.75rem; font-weight: 800; }
+/* Note: Removed .text-xs through .text-6xl overrides - they conflicted with Tailwind's
+   responsive font sizing (e.g. lg:text-[7.5rem] on hero). Use Tailwind utilities directly. */
+
+/* Hero section - forced desktop font sizes (bypasses any conflicting styles) */
+#home .hero-title {
+  font-size: 2.25rem; /* mobile: text-4xl */
+}
+@media (min-width: 640px) {
+  #home .hero-title {
+    font-size: 3rem; /* sm: text-5xl */
+  }
+}
+@media (min-width: 1024px) {
+  #home .hero-title {
+    font-size: 2rem !important; /* lg - fits half-width column */
+  }
+}
+@media (min-width: 1280px) {
+  #home .hero-title {
+    font-size: 2.25rem !important; /* xl */
+  }
+}
+@media (min-width: 1536px) {
+  #home .hero-title {
+    font-size: 2.5rem !important; /* 2xl */
+  }
+}
+
+#home .hero-description {
+  font-size: 1.125rem; /* mobile: text-lg */
+}
+@media (min-width: 640px) {
+  #home .hero-description {
+    font-size: 1.25rem; /* sm: text-xl */
+  }
+}
+@media (min-width: 1024px) {
+  #home .hero-description {
+    font-size: 1rem !important; /* lg */
+  }
+}
+@media (min-width: 1280px) {
+  #home .hero-description {
+    font-size: 1.0625rem !important; /* xl */
+  }
+}
+@media (min-width: 1536px) {
+  #home .hero-description {
+    font-size: 1.125rem !important; /* 2xl */
+  }
+}
 
 /* Enhanced content typography */
 p {
@@ -194,7 +234,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1;
   margin-bottom: 0.5rem;
 }
 

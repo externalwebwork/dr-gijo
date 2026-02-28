@@ -7,7 +7,7 @@ export default function MobileNav() {
 
   const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#treatments", label: "Treatment" },
+    { href: "#treatments", label: "Services" },
     { href: "#why-choose-us", label: "Why Choose Us" },
     { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },
@@ -54,7 +54,7 @@ export default function MobileNav() {
               key={link.href}
               href={link.href}
               onClick={handleLinkClick}
-              className="block py-3 px-4 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium text-base transition-colors"
+              className="block py-3 px-4 text-gray-700 hover:text-[#2E86C1] hover:bg-blue-50 rounded-lg font-medium text-base transition-colors"
             >
               {link.label}
             </a>
@@ -65,17 +65,17 @@ export default function MobileNav() {
               onClick={handleLinkClick}
               className="flex items-center gap-2 py-3 px-4 text-gray-700 font-semibold"
             >
-              <svg className="w-5 h-5 text-[#652576]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-[#2E86C1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
               +91 9497884584
             </a>
             <a
-              href="https://wa.me/919497884584?text=Hello%2C%20I%20would%20like%20to%20book%20an%20Ayurvedic%20spine%20consultation%20at%20your%20Kottayam%20clinic."
+              href="https://wa.me/919497884584?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment."
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLinkClick}
-              className="flex items-center justify-center gap-2 w-full bg-[#652576] hover:bg-[#4f1f5d] text-white py-3 px-4 rounded-xl font-bold text-base transition-colors"
+              className="flex items-center justify-center gap-2 w-full bg-[#2E86C1] hover:bg-[#2574a8] text-white py-3 px-4 rounded-xl font-bold text-base transition-colors"
             >
               Book Appointment
             </a>

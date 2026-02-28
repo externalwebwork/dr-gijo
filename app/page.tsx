@@ -21,12 +21,9 @@ export default function Home() {
       <StatsSection />
       <PainReliefSection />
       <SpecializedTreatmentsSection />
-      <OsteoarthritisSection />
-      <TreatmentProcedureSection />
+      {/* <OsteoarthritisSection />
+      <TreatmentProcedureSection /> */}
       <WhyChooseUsSection />
-      {/* <TreatmentsSection />
-      <AboutSection />
-      <TestimonialsSection /> */}
       <FAQSection />
       <ContactSection />
       <Footer />
