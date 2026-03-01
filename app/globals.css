@@ -25,6 +25,11 @@
   }
 }
 
+html {
+  overflow-x: clip;
+  width: 100%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -32,6 +37,8 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
+  overflow-x: clip;
+  width: 100%;
 }
 
 /* Custom animations and styles */

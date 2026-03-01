@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -60,11 +61,9 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
-      <body
-        className={`${poppins.variable} antialiased`}
-        style={{ overflowX: 'hidden' }}
-      >
+      <body className={`${poppins.variable} antialiased`}>
         {children}
+        <WhatsAppFloat />
       </body>
     </html>
   );

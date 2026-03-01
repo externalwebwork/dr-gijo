@@ -19,7 +19,7 @@ import MeetDentistSection from "./components/MeetDentistSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full min-w-0 overflow-x-hidden">
       <Navigation />
       <HeroSection />
       <StatsSection />
