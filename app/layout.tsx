@@ -11,34 +11,34 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://smiledental.com"),
-  title: "Dental Clinic in Kottayam | Family Dental Care | Smile Dental",
+  metadataBase: new URL("https://dentalsolutionsthodupuzha.com"),
+  title: "Dental Solutions Thodupuzha | Painless Microscopic Root Canal | Dr. Gijo",
   description:
-    "Trusted family dental clinic in Kottayam. Quality dental care including cleanings, fillings, root canal, teeth whitening, and more. Book your appointment today.",
+    "Best dental clinic in Thodupuzha. Painless microscopic root canal treatment by Dr. Gijo. Advanced root canal specialist, endodontist care. Book appointment today.",
   keywords: [
-    "dental clinic Kottayam",
-    "family dentist Kottayam",
-    "dental care Kottayam",
-    "teeth cleaning Kottayam",
-    "root canal Kottayam",
-    "teeth whitening Kottayam",
-    "dental fillings Kottayam",
+    "dental clinic Thodupuzha",
+    "root canal Thodupuzha",
+    "painless root canal Thodupuzha",
+    "microscopic root canal Thodupuzha",
+    "Dr. Gijo dentist",
+    "Dental Solutions Thodupuzha",
+    "endodontist Thodupuzha",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Smile Dental | Family Dental Clinic in Kottayam",
+    title: "Dental Solutions Thodupuzha | Painless Microscopic Root Canal | Dr. Gijo",
     description:
-      "Quality dental care for the whole family. Cleanings, fillings, root canal, teeth whitening, and comprehensive dental services in Kottayam.",
+      "Best dental clinic in Thodupuzha. Painless microscopic root canal treatment and advanced dental care by Dr. Gijo. Book your appointment.",
     type: "website",
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dental Clinic in Kottayam | Smile Dental",
+    title: "Dental Solutions Thodupuzha | Painless Root Canal | Dr. Gijo",
     description:
-      "Trusted family dental clinic offering comprehensive care including cleanings, fillings, root canal, and teeth whitening.",
+      "Painless microscopic root canal treatment in Thodupuzha. Advanced dental care by Dr. Gijo. Book your appointment today.",
   },
   icons: {
     icon: [
