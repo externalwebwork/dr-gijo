@@ -9,9 +9,9 @@ export default function HeroSection() {
     >
       <div className="absolute inset-0 z-0 pointer-events-none bg-white/40" aria-hidden="true" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-start lg:items-center">
+        <div className="grid lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-start lg:items-center">
           {/* Booking Form - Second on mobile, right column on desktop */}
-          <div className="lg:pl-6 order-2 lg:flex lg:items-center lg:min-h-0">
+          <div className="lg:col-span-2 lg:pl-6 order-2 lg:flex lg:items-center lg:min-h-0">
             <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 lg:p-6 lg:py-8 border border-gray-100 w-full">
               <div className="text-center mb-3 lg:mb-5">
                 <h2 className="text-2xl sm:text-3xl lg:text-2xl font-bold text-gray-900">
@@ -82,16 +82,16 @@ export default function HeroSection() {
           </div>
 
           {/* Left Content - First on mobile, left column on desktop */}
-          <div className="space-y-4 sm:space-y-6 order-1 lg:flex lg:flex-col lg:justify-center min-w-0 overflow-hidden">
-            <div className="space-y-3 sm:space-y-4 min-w-0 max-w-full">
-              <h1 className="hero-title text-4xl sm:text-5xl font-black text-[#2E86C1] leading-[1.15] tracking-tight text-center lg:text-left break-words">
+          <div className="lg:col-span-3 space-y-4 sm:space-y-6 order-1 lg:flex lg:flex-col lg:justify-center lg:w-full">
+            <div className="space-y-3 sm:space-y-4 lg:w-full">
+              <h1 className="hero-title text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-[#2E86C1] leading-[1.15] tracking-tight text-center lg:text-left break-words">
                 Tooth pain keeping you awake?
                 <br />
                 <span className="text-gray-800 font-black">
                   Get fast, painless relief.
                 </span>
               </h1>
-              <p className="hero-description text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl lg:max-w-full font-medium text-center lg:text-left lg:mx-0 mx-auto break-words">
+              <p className="hero-description text-lg sm:text-xl lg:text-xl xl:text-2xl text-gray-600 leading-relaxed font-medium text-center lg:text-left lg:mx-0 mx-auto break-words">
                 Best dental clinic in Thodupuzha offering Painless microscopic root canal treatment.
                 <br className="hidden sm:block" />
                 Advanced microscopic root canal treatment specialist available at Dental Solutions Thodupuzha

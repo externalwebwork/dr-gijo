@@ -177,55 +177,6 @@ body {
 /* Note: Removed .text-xs through .text-6xl overrides - they conflicted with Tailwind's
    responsive font sizing (e.g. lg:text-[7.5rem] on hero). Use Tailwind utilities directly. */
 
-/* Hero section - forced desktop font sizes (bypasses any conflicting styles) */
-#home .hero-title {
-  font-size: 2.25rem; /* mobile: text-4xl */
-}
-@media (min-width: 640px) {
-  #home .hero-title {
-    font-size: 3rem; /* sm: text-5xl */
-  }
-}
-@media (min-width: 1024px) {
-  #home .hero-title {
-    font-size: 2rem !important; /* lg - fits half-width column */
-  }
-}
-@media (min-width: 1280px) {
-  #home .hero-title {
-    font-size: 2.25rem !important; /* xl */
-  }
-}
-@media (min-width: 1536px) {
-  #home .hero-title {
-    font-size: 2.5rem !important; /* 2xl */
-  }
-}
-
-#home .hero-description {
-  font-size: 1.125rem; /* mobile: text-lg */
-}
-@media (min-width: 640px) {
-  #home .hero-description {
-    font-size: 1.25rem; /* sm: text-xl */
-  }
-}
-@media (min-width: 1024px) {
-  #home .hero-description {
-    font-size: 1rem !important; /* lg */
-  }
-}
-@media (min-width: 1280px) {
-  #home .hero-description {
-    font-size: 1.0625rem !important; /* xl */
-  }
-}
-@media (min-width: 1536px) {
-  #home .hero-description {
-    font-size: 1.125rem !important; /* 2xl */
-  }
-}
-
 /* Enhanced content typography */
 p {
   margin-bottom: 1rem;

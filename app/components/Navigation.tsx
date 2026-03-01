@@ -79,7 +79,7 @@ border-b border-gray-200 shadow-sm"
               href="https://wa.me/919497884584?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-[#2E86C1] hover:bg-[#F4F6F7] px-8 py-3 rounded-xl text-base font-bold transition-all hover:shadow-lg hover:-translate-y-0.5"
+              className="text-[#2E86C1] bg-[#F4F6F7] px-8 py-3 rounded-xl text-base font-bold transition-all shadow-lg -translate-y-0.5"
             >
               Book Appointment
             </a>

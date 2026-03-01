@@ -12,6 +12,10 @@ import FAQSection from "./components/FAQSection";
 import PainReliefSection from "./components/PainReliefSection";
 import SpecializedTreatmentsSection from "./components/SpecializedTreatmentsSection";
 import Footer from "./components/Footer";
+import RootCanalSection from "./components/RootCanalSection";
+import RootCanalServicesSection from "./components/RootCanalServicesSection";
+import PatientTransformationsSection from "./components/PatientTransformationsSection";
+import MeetDentistSection from "./components/MeetDentistSection";
 
 export default function Home() {
   return (
@@ -19,10 +23,11 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <StatsSection />
-      <PainReliefSection />
+      <RootCanalSection />
+      <RootCanalServicesSection />
       <SpecializedTreatmentsSection />
-      {/* <OsteoarthritisSection />
-      <TreatmentProcedureSection /> */}
+      <PatientTransformationsSection />
+      <MeetDentistSection />
       <WhyChooseUsSection />
       <FAQSection />
       <ContactSection />
