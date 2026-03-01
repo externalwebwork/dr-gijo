@@ -45,7 +45,7 @@ border-b border-gray-200 shadow-sm"
               href="#treatments"
               className="text-gray-700 hover:text-[#2E86C1] font-medium transition-colors text-base"
             >
-              Services
+              Treatment
             </a>
             <a
               href="#why-choose-us"

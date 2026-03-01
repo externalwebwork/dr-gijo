@@ -43,6 +43,14 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="#treatments"
+                  className="hover:text-[#2E86C1] transition-colors font-medium text-sm sm:text-base"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
                   href="#stats"
                   className="hover:text-[#2E86C1] transition-colors font-medium text-sm sm:text-base"
                 >
@@ -51,10 +59,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#treatments"
+                  href="#root-canal"
                   className="hover:text-[#2E86C1] transition-colors font-medium text-sm sm:text-base"
                 >
-                  Services
+                  Root Canal
                 </a>
               </li>
               <li>

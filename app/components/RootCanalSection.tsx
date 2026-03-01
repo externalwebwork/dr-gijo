@@ -32,7 +32,7 @@ const symptoms = [
 
 export default function RootCanalSection() {
   return (
-    <section className="py-10 lg:py-10 bg-white">
+    <section id="root-canal" className="py-10 lg:py-10 bg-white">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 lg:gap-20">
 
         {/* LEFT CONTENT */}

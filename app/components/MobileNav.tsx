@@ -8,7 +8,8 @@ export default function MobileNav() {
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#treatments", label: "Services" },
-    { href: "#why-choose-us", label: "Why Choose Us" },
+    { href: "#stats", label: "Why Choose Us" },
+    { href: "#root-canal", label: "Root Canal" },
     { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },
   ];
