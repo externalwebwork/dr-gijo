@@ -4,11 +4,10 @@ import MobileNav from "./MobileNav";
 export default function Navigation() {
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-[100] 
-bg-white/90 backdrop-blur-lg 
-border-b border-gray-200 shadow-sm"
+      className="fixed top-0 left-0 right-0 z-[100] w-full max-w-[100vw] overflow-hidden bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm"
+      style={{ position: 'fixed' }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
           <div className="flex items-center min-w-0">

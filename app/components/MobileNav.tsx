@@ -43,11 +43,12 @@ export default function MobileNav() {
         />
       )}
 
-      {/* Mobile Menu Panel */}
+      {/* Mobile Menu Panel - positioned below fixed nav */}
       <div
-        className={`lg:hidden fixed top-16 sm:top-20 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-xl transition-all duration-300 ${
+        className={`lg:hidden fixed top-16 sm:top-20 left-0 right-0 z-[99] w-full max-w-[100vw] overflow-hidden bg-white border-b border-gray-100 shadow-xl transition-all duration-300 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}
+        style={{ position: 'fixed' }}
       >
         <div className="px-4 py-4 space-y-1 max-h-[calc(100vh-5rem)] overflow-y-auto">
           {navLinks.map((link) => (
