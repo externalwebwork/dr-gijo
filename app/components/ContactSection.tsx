@@ -35,7 +35,22 @@ export default function ContactSection() {
                   </div>
                   <div className="min-w-0 overflow-hidden">
                     <div className="font-bold text-gray-900">Location</div>
-                    <div className="text-gray-600 font-medium break-words">Kuruttukulam Arcade, 1st Floor Above ESSAF Bank, Near Old KSRTC Bus Stand, Kanjiramattom Bypass, Thodupuzha</div>
+                    <a
+                      href="https://www.google.com/maps?q=10.911744,75.9136256"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 font-medium hover:text-[#2E86C1] transition-colors block break-words"
+                    >
+                      Kuruttukulam Arcade, 1st Floor Above ESSAF Bank, Near Old KSRTC Bus Stand, Kanjiramattom Bypass, Thodupuzha
+                    </a>
+                    <a
+                      href="https://www.google.com/maps?q=10.911744,75.9136256"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-2 text-[#2E86C1] font-semibold text-sm hover:underline"
+                    >
+                      View on Google Maps
+                    </a>
                   </div>
                 </div>
               </div>

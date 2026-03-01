@@ -146,7 +146,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-600">
           <p className="font-medium text-xs sm:text-sm md:text-base px-2">
-            &copy; 2024 Dental Solutions By Dr. Gijo. All rights reserved.
+            &copy; 2026 Dental Solutions By Dr. Gijo. All rights reserved.
           </p>
         </div>
       </div>
