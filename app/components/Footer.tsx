@@ -6,25 +6,25 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           <div className="sm:col-span-2 md:col-span-1">
-            <a href="#home" className="flex items-center space-x-3 mb-4">
+            <a href="#home" className="flex items-center space-x-2 sm:space-x-3 mb-4">
               <Image
                 src="/logo2.png"
-                alt="Smile Dental"
+                alt="Dental Solutions Logo"
                 width={40}
                 height={40}
-                className="object-contain w-10 h-10 flex-shrink-0"
+                className="object-contain w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0"
               />
               <div className="min-w-0">
-                <span className="text-lg sm:text-xl font-bold text-[#2E86C1] tracking-tight block">
-                  Smile Dental
+                <span className="text-lg sm:text-xl font-bold text-gray-900 tracking-tight block">
+                  Dental Solutions
                 </span>
                 <span className="text-xs sm:text-sm text-gray-600 font-medium -mt-0.5 block">
-                  Family Dental Clinic
+                  By Dr. Gijo
                 </span>
               </div>
             </a>
             <p className="text-gray-600 font-medium text-sm sm:text-base">
-              Your trusted family dental clinic for quality care and a healthier smile.
+              Advanced painless microscopic root canal treatment in Thodupuzha. Your trusted dental care under Dr. Gijo.
             </p>
           </div>
 
@@ -137,24 +137,8 @@ export default function Footer() {
                   +91 8111949498
                 </a>
               </li>
-              <li>
-                <a
-                  href="tel:+918111949498"
-                  className="hover:text-[#2E86C1] transition-colors font-medium text-sm sm:text-base block"
-                >
-                  +91 8111949498
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:smiledental@gmail.com"
-                  className="hover:text-[#2E86C1] transition-colors font-medium text-sm sm:text-base break-all"
-                >
-                  smiledental@gmail.com
-                </a>
-              </li>
               <li className="font-medium text-sm sm:text-base">
-                Perumbaikad PO, Samkranti, Kottayam, Kerala
+                Kuruttukulam Arcade, 1st Floor Above ESSAF Bank, Near Old KSRTC Bus Stand, Kanjiramattom Bypass, Thodupuzha
               </li>
             </ul>
           </div>
@@ -162,7 +146,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-600">
           <p className="font-medium text-xs sm:text-sm md:text-base px-2">
-            &copy; 2024 Smile Dental. All rights reserved.
+            &copy; 2024 Dental Solutions By Dr. Gijo. All rights reserved.
           </p>
         </div>
       </div>
