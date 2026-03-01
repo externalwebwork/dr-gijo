@@ -127,7 +127,7 @@ export default function SpecializedTreatmentsSection() {
         {/* CTA */}
         <div className="mt-12 lg:mt-14 text-center">
           <a
-            href="tel:+919497884584"
+            href="tel:+918111949498"
             className="inline-flex items-center justify-center gap-2 bg-[#2E86C1] hover:bg-[#2574a8] text-white px-8 py-4 rounded-xl font-semibold text-base transition-colors shadow-lg hover:shadow-xl"
           >
             Book Your Consultation

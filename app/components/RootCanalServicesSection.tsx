@@ -84,7 +84,7 @@ export default function RootCanalServicesSection() {
 
                 <div className="mt-6 flex justify-center lg:justify-start">
                   <a
-                    href="tel:+919497884584"
+                    href="tel:+918111949498"
                     className="inline-block bg-[#2E86C1] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1E6FA8] transition"
                   >
                     Call Now

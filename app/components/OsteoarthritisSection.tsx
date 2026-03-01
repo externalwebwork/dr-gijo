@@ -154,14 +154,14 @@ export default function OsteoarthritisSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919876543210"
+              href="tel:+918111949498"
               className="bg-white text-[#652576] px-8 py-4 rounded-xl font-semibold hover:bg-purple-50 transition"
             >
               Call Now
             </a>
 
             <a
-              href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20book%20an%20Ayurvedic%20spine%20consultation%20at%20your%20Kottayam%20clinic."
+              href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20your%20clinic.%20I%20am%20experiencing%20tooth%20pain%20and%20need%20consultation.%20Please%20let%20me%20know%20the%20available%20time%20slots."
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#652576] transition"

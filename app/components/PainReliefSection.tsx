@@ -65,7 +65,7 @@ export default function PainReliefSection() {
             {/* CTA Button */}
             <div className="pt-4 flex justify-center lg:justify-start">
               <a
-                href="tel:+919876543210"
+                href="tel:+918111949498"
                 className="inline-flex items-center justify-center gap-3 bg-[#652576] hover:bg-[#4f1f5d] text-white px-8 py-4 sm:px-10 sm:py-5 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 group"
               >
                 <svg

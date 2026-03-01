@@ -70,13 +70,13 @@ border-b border-gray-200 shadow-sm"
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-6">
             <a
-              href="tel:+919497884584"
+              href="tel:+918111949498"
               className="text-gray-900 hover:text-[#2E86C1] font-semibold text-base transition-colors"
             >
-              +91 9497884584
+              +91 8111949498
             </a>
             <a
-              href="https://wa.me/919497884584?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment."
+              href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20your%20clinic.%20I%20am%20experiencing%20tooth%20pain%20and%20need%20consultation.%20Please%20let%20me%20know%20the%20available%20time%20slots."
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#2E86C1] bg-[#F4F6F7] px-8 py-3 rounded-xl text-base font-bold transition-all shadow-lg -translate-y-0.5"

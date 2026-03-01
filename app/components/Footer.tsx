@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="sm:col-span-2 md:col-span-1">
             <a href="#home" className="flex items-center space-x-3 mb-4">
               <Image
-                src="/headerlogo2.png"
+                src="/logo2.png"
                 alt="Smile Dental"
                 width={40}
                 height={40}
@@ -123,18 +123,18 @@ export default function Footer() {
             <ul className="space-y-1.5 sm:space-y-2 text-gray-600">
               <li>
                 <a
-                  href="tel:+919497884584"
+                  href="tel:+918111949498"
                   className="hover:text-[#2E86C1] transition-colors font-medium text-sm sm:text-base block"
                 >
-                  +91 9497884584
+                  +91 8111949498
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+917561820584"
+                  href="tel:+918111949498"
                   className="hover:text-[#2E86C1] transition-colors font-medium text-sm sm:text-base block"
                 >
-                  +91 7561820584
+                  +91 8111949498
                 </a>
               </li>
               <li>

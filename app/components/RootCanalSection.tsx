@@ -65,7 +65,7 @@ export default function RootCanalSection() {
           {/* CTA */}
           <div className="mt-8">
             <a
-              href="tel:+919497884584"
+              href="tel:+918111949498"
               className="inline-block bg-[#2E86C1] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1E6FA8] transition"
             >
               Call for Consultation

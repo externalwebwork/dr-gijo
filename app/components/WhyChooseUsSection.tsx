@@ -139,7 +139,7 @@ export default function WhyChooseUsSection() {
         {/* CTA */}
         <div className="mt-12 lg:mt-16 text-center">
           <a
-            href="tel:+919497884584"
+            href="tel:+918111949498"
             className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-[#2E86C1] text-white font-semibold text-lg hover:bg-[#2574a8] transition-colors shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30"
           >
             Book Your Consultation

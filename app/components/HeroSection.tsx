@@ -100,7 +100,7 @@ export default function HeroSection() {
 
             <div className="flex flex-wrap gap-3 pt-2">
               <a
-                href="tel:+919497884584"
+                href="tel:+918111949498"
                 className="inline-flex items-center justify-center gap-2 bg-[#2E86C1] hover:bg-[#2574a8] text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
               >
                 <svg
@@ -119,7 +119,7 @@ export default function HeroSection() {
                 <span className="truncate">Call Now</span>
               </a>
               <a
-                href="https://wa.me/919497884584?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment."
+                href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20your%20clinic.%20I%20am%20experiencing%20tooth%20pain%20and%20need%20consultation.%20Please%20let%20me%20know%20the%20available%20time%20slots."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-xl hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"
