@@ -1,6 +1,53 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
 import DateInput from "./DateInput";
 
 export default function HeroSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    consultMode: "",
+    date: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const message = `Hello, I would like to book a dental appointment at your clinic.
+
+Details:
+• Name: ${formData.name}
+• Phone: ${formData.phone}
+• Consultation Mode: ${formData.consultMode}
+• Preferred Date: ${formData.date}
+
+Please let me know the available time slots.`;
+    
+    const whatsappUrl = `https://wa.me/918111949498?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { id, value } = e.target;
+    
+    // Map the form field names to state properties
+    const fieldName = id === 'consult-mode' ? 'consultMode' : id;
+    
+    setFormData({
+      ...formData,
+      [fieldName]: value
+    });
+  };
+
+  const handleDateChange = (date: string) => {
+    setFormData({
+      ...formData,
+      date
+    });
+  };
+
   return (
     <section
       id="home"
@@ -19,7 +66,7 @@ export default function HeroSection() {
                 </h2>
               </div>
 
-              <form className="space-y-3 lg:space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3 lg:space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2">
                     Full Name:
@@ -30,6 +77,8 @@ export default function HeroSection() {
                     placeholder="Enter your full name"
                     className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
                     required
+                    value={formData.name}
+                    onChange={handleInputChange}
                   />
                 </div>
 
@@ -43,6 +92,8 @@ export default function HeroSection() {
                     placeholder="Your number"
                     className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
                     required
+                    value={formData.phone}
+                    onChange={handleInputChange}
                   />
                 </div>
 
@@ -52,8 +103,10 @@ export default function HeroSection() {
                   </label>
                   <select
                     id="consult-mode"
-                    className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium bg-white"
+                    className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium bg-white text-gray-900 appearance-none cursor-pointer"
                     required
+                    value={formData.consultMode}
+                    onChange={handleInputChange}
                   >
                     <option value="">Select</option>
                     <option value="online">Online</option>
@@ -68,6 +121,8 @@ export default function HeroSection() {
                   <DateInput
                     id="date"
                     className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium"
+                    value={formData.date}
+                    onChange={handleDateChange}
                   />
                 </div>
 

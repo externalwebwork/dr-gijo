@@ -70,7 +70,9 @@ export default function MeetDentistSection() {
             {/* CTA */}
             <div className="mt-3">
               <a
-                href="tel:+918111949498"
+                href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20with%20Dr.%20Gijo.%20I%20am%20interested%20in%20consultation%20and%20would%20like%20to%20know%20more%20about%20available%20time%20slots.%20Please%20let%20me%20know%20the%20next%20steps%20for%20booking."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-[#2E86C1] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1E6FA8] transition shadow-sm"
               >
                 Book an Appointment

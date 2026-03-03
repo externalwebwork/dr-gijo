@@ -139,7 +139,9 @@ export default function WhyChooseUsSection() {
         {/* CTA */}
         <div className="mt-12 lg:mt-16 text-center">
           <a
-            href="tel:+918111949498"
+            href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20your%20clinic.%20I%20am%20interested%20in%20your%20services%20and%20would%20like%20to%20know%20more%20about%20available%20time%20slots.%20Please%20let%20me%20know%20the%20next%20steps%20for%20booking."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-[#2E86C1] text-white font-semibold text-lg hover:bg-[#2574a8] transition-colors shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30"
           >
             Book Your Consultation
