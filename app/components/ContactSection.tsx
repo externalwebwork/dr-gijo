@@ -1,4 +1,47 @@
+"use client";
+
+import { useState } from "react";
+
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const message = `Hello, I would like to book a dental appointment at your clinic.
+
+Details:
+• Name: ${formData.firstName} ${formData.lastName}
+• Phone: ${formData.phone}
+• Dental Needs: ${formData.message}
+
+Please let me know the next steps for booking.`;
+    
+    const whatsappUrl = `https://wa.me/918111949498?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value, placeholder } = e.target;
+    
+    // Map the form field names to state properties
+    let fieldName;
+    if (id === 'firstName') fieldName = 'firstName';
+    else if (id === 'lastName') fieldName = 'lastName';
+    else if (id === 'phone') fieldName = 'phone';
+    else if (id === 'message') fieldName = 'message';
+    else fieldName = placeholder;
+    
+    setFormData({
+      ...formData,
+      [fieldName]: value
+    });
+  };
   return (
     <section id="contact" className="py-10 lg:py-10 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,37 +103,51 @@ export default function ContactSection() {
           <div className="min-w-0">
             <div className="bg-white rounded-xl p-6 lg:p-8 shadow-lg border border-gray-100 min-w-0 overflow-hidden">
               <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6">Quick Appointment</h3>
-              <form className="space-y-4 min-w-0">
+              <form onSubmit={handleSubmit} className="space-y-4 min-w-0">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
                     type="text"
+                    id="firstName"
                     placeholder="First Name"
-                    className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium"
+                    className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium bg-white text-gray-900 placeholder:text-gray-500"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    required
                   />
                   <input
                     type="text"
+                    id="lastName"
                     placeholder="Last Name"
-                    className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium"
+                    className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium bg-white text-gray-900 placeholder:text-gray-500"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    required
                   />
                 </div>
                 <input
                   type="tel"
+                  id="phone"
                   placeholder="Phone Number"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium bg-white text-gray-900 placeholder:text-gray-500"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
                 />
                 <textarea
+                  id="message"
                   placeholder="Tell us about your dental needs..."
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium bg-white text-gray-900 placeholder:text-gray-500"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
                 />
-                <a
-                  href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20your%20clinic.%20I%20am%20interested%20in%20your%20services%20and%20would%20like%20to%20know%20more%20about%20available%20time%20slots.%20Please%20let%20me%20know%20the%20next%20steps%20for%20booking."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="submit"
                   className="w-full inline-flex items-center justify-center bg-[#2E86C1] hover:bg-[#2574a8] text-white py-3 lg:py-4 rounded-lg font-bold transition-colors text-base lg:text-lg"
                 >
                   Book Appointment
-                </a>
+                </button>
               </form>
             </div>
           </div>

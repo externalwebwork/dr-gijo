@@ -1,6 +1,53 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
 import DateInput from "./DateInput";
 
 export default function HeroSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    consultMode: "",
+    date: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const message = `Hello, I would like to book a dental appointment at your clinic.
+
+Details:
+• Name: ${formData.name}
+• Phone: ${formData.phone}
+• Consultation Mode: ${formData.consultMode}
+• Preferred Date: ${formData.date}
+
+Please let me know the available time slots.`;
+    
+    const whatsappUrl = `https://wa.me/918111949498?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { id, value } = e.target;
+    
+    // Map the form field names to state properties
+    const fieldName = id === 'consult-mode' ? 'consultMode' : id;
+    
+    setFormData({
+      ...formData,
+      [fieldName]: value
+    });
+  };
+
+  const handleDateChange = (date: string) => {
+    setFormData({
+      ...formData,
+      date
+    });
+  };
+
   return (
     <section
       id="home"
@@ -19,7 +66,7 @@ export default function HeroSection() {
                 </h2>
               </div>
 
-              <form className="space-y-3 lg:space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3 lg:space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2">
                     Full Name:
@@ -30,6 +77,8 @@ export default function HeroSection() {
                     placeholder="Enter your full name"
                     className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
                     required
+                    value={formData.name}
+                    onChange={handleInputChange}
                   />
                 </div>
 
@@ -43,6 +92,8 @@ export default function HeroSection() {
                     placeholder="Your number"
                     className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
                     required
+                    value={formData.phone}
+                    onChange={handleInputChange}
                   />
                 </div>
 
@@ -52,8 +103,10 @@ export default function HeroSection() {
                   </label>
                   <select
                     id="consult-mode"
-                    className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium bg-white"
+                    className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium bg-white text-gray-900 appearance-none cursor-pointer"
                     required
+                    value={formData.consultMode}
+                    onChange={handleInputChange}
                   >
                     <option value="">Select</option>
                     <option value="online">Online</option>
@@ -68,6 +121,8 @@ export default function HeroSection() {
                   <DateInput
                     id="date"
                     className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium"
+                    value={formData.date}
+                    onChange={handleDateChange}
                   />
                 </div>
 
@@ -83,12 +138,15 @@ export default function HeroSection() {
 
           {/* Left Content - First on mobile, left column on desktop */}
           <div className="lg:col-span-3 space-y-4 sm:space-y-6 order-1 lg:flex lg:flex-col lg:justify-center lg:w-full">
-            <div className="space-y-3 sm:space-y-4 lg:w-full">
-              <h1 className="hero-title text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-[#2E86C1] leading-[1.15] tracking-tight text-center lg:text-left break-words">
-                Tooth pain keeping you awake?
+            <div className="space-y-2 sm:space-y-3 lg:space-y-4 lg:w-full">
+              <div className="inline-flex items-center justify-center lg:justify-start px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[11px] sm:text-xs font-semibold tracking-[0.18em] text-[#2E86C1] uppercase mx-auto lg:mx-0">
+                Dental Clinic in Thodupuzha
+              </div>
+              <h1 className="hero-title text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-black text-[#2E86C1] leading-[1.15] tracking-tight text-center lg:text-left break-words">
+                Tooth Pain Keeping You Awake?
                 <br />
                 <span className="text-gray-800 font-black">
-                  Get fast, painless relief.
+                  Get fast, Painless Relief.
                 </span>
               </h1>
               <p className="hero-description text-lg sm:text-xl lg:text-xl xl:text-2xl text-gray-600 leading-relaxed font-medium text-center lg:text-left lg:mx-0 mx-auto break-words">

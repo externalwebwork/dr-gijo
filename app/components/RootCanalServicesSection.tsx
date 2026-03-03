@@ -34,21 +34,21 @@ export default function RootCanalServicesSection() {
   return (
     <section className="py-10 lg:py-10 bg-[#F9FBFC]">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-            Our <span className="text-[#2E86C1]">Root Canal</span> Treatment Services
+            Our <span className="text-[#2E86C1]">Root Canal</span> Treatment
+            Services
           </h2>
           <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-base sm:text-lg">
-            We provide advanced root canal treatments under microscope to relieve pain,
-            eliminate infection, and preserve your natural teeth. Our doctors suggest
-            the right treatment based on your tooth condition.
+            Advanced microscope-assisted root canal to relieve pain, remove
+            infection, and save your natural tooth. Treatment is planned based
+            on your tooth condition.
           </p>
         </div>
 
         {/* Services */}
-        <div className="space-y-20">
+        <div className="space-y-10 sm:space-y-12 lg:space-y-14">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -56,45 +56,46 @@ export default function RootCanalServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
-                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
-              }`}
+              className="bg-gray-50 rounded-2xl sm:rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200"
             >
-              {/* Image */}
-              <div className={`${index % 2 !== 0 ? "lg:order-2" : ""}`}>
-                <div className="relative w-full h-64 sm:h-80 rounded-2xl overflow-hidden shadow-sm">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center p-5 sm:p-6 lg:p-8">
+                {/* Image */}
+                <div className={`${index % 2 !== 0 ? "lg:order-2" : ""}`}>
+                  <div className="relative w-full h-56 sm:h-72 rounded-2xl overflow-hidden shadow-sm">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className={`text-center lg:text-left ${index % 2 !== 0 ? "lg:order-1" : ""}`}>
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 leading-snug">
-                  {service.title}
-                </h3>
+                {/* Content */}
+                <div
+                  className={`text-center lg:text-left ${index % 2 !== 0 ? "lg:order-1" : ""}`}
+                >
+                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 leading-snug">
+                    {service.title}
+                  </h3>
 
-                <p className="mt-4 text-gray-600 text-base leading-relaxed">
-                  {service.description}
-                </p>
+                  <p className="mt-4 text-gray-600 text-base leading-relaxed">
+                    {service.description}
+                  </p>
 
-                <div className="mt-6 flex justify-center lg:justify-start">
-                  <a
-                    href="tel:+918111949498"
-                    className="inline-block bg-[#2E86C1] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1E6FA8] transition"
-                  >
-                    Call Now
-                  </a>
+                  <div className="mt-6 flex justify-center lg:justify-start">
+                    <a
+                      href="tel:+918111949498"
+                      className="inline-block bg-[#2E86C1] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1E6FA8] transition"
+                    >
+                      Call Now
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
