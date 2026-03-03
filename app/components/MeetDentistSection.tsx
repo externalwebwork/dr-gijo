@@ -30,7 +30,7 @@ export default function MeetDentistSection() {
 
             {/* Doctor Name */}
             <div className="mt-8">
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-3xl font-semibold text-gray-900">
                 Dr. Gijo BDS, MDS
               </h3>
               <p className="text-[#2E86C1] font-medium mt-1">
@@ -42,24 +42,24 @@ export default function MeetDentistSection() {
             </div>
 
             {/* Highlights */}
-            <div className="mt-8 space-y-4">
+            <div className="mt-4 space-y-1">
 
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 mt-2 bg-[#2E86C1] rounded-full"></div>
+              <div className="flex items-start gap-2 sm:gap-3">
+                <div className="w-2 h-2 sm:w-3 sm:h-3 flex-shrink-0 mt-2 bg-[#2E86C1] rounded-full"></div>
                 <p className="text-gray-700">
                   Highly qualified and trained in Microscopic Root Canal Treatment
                 </p>
               </div>
 
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 mt-2 bg-[#2E86C1] rounded-full"></div>
+              <div className="flex items-start gap-2 sm:gap-3">
+                <div className="w-2 h-2 sm:w-3 sm:h-3 flex-shrink-0 mt-2 bg-[#2E86C1] rounded-full"></div>
                 <p className="text-gray-700">
                   Focus on biomimetic dentistry
                 </p>
               </div>
 
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 mt-2 bg-[#2E86C1] rounded-full"></div>
+              <div className="flex items-start gap-2 sm:gap-3">
+                <div className="w-2 h-2 sm:w-3 sm:h-3 flex-shrink-0 mt-2 bg-[#2E86C1] rounded-full"></div>
                 <p className="text-gray-700">
                   Minimal invasive dentistry approach
                 </p>
@@ -68,7 +68,7 @@ export default function MeetDentistSection() {
             </div>
 
             {/* CTA */}
-            <div className="mt-10">
+            <div className="mt-3">
               <a
                 href="tel:+918111949498"
                 className="inline-block bg-[#2E86C1] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1E6FA8] transition shadow-sm"
@@ -84,13 +84,13 @@ export default function MeetDentistSection() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative w-full h-[400px] sm:h-[500px] lg:h-[550px] rounded-3xl overflow-hidden shadow-md"
+            className="relative w-full h-[400px] sm:h-[500px] lg:h-[550px] bg-blue-50/50 rounded-3xl overflow-hidden shadow-md"
           >
             <Image
-              src="/dr-gijo.png"
+              src="/dr.png"
               alt="Dr Gijo - Dentist in Thodupuzha"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </motion.div>

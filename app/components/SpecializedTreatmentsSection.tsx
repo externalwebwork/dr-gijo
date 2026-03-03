@@ -10,8 +10,7 @@ const comparisonRows = [
   {
     aspect: "Magnification & Visibility",
     conventional: "Performed with direct vision (Naked Eye)",
-    microscopic:
-      "Performed under high-magnification dental microscope",
+    microscopic: "Performed under high-magnification dental microscope",
   },
   {
     aspect: "Precision Level",
@@ -23,8 +22,7 @@ const comparisonRows = [
   {
     aspect: "Infection Control",
     conventional: "Cotton rolls and suction – Non standardized",
-    microscopic:
-      "Rubber dam isolation (International standard of care)",
+    microscopic: "Rubber dam isolation (International standard of care)",
   },
   {
     aspect: "Canal Cleaning & Disinfection",
@@ -54,8 +52,8 @@ export default function SpecializedTreatmentsSection() {
             Advanced Microscopic vs. Conventional Root Canal
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            The following table highlights why microscopic technology offers a
-            superior standard of care:
+            The table below outlines the advantages of microscopic technology in
+            delivering superior care.
           </p>
         </div>
 
@@ -65,7 +63,7 @@ export default function SpecializedTreatmentsSection() {
             <div className="col-span-1 p-6 lg:p-8 bg-gray-50 border-b border-r border-gray-200 font-bold text-gray-900 text-base lg:text-lg uppercase tracking-wider">
               Treatment Aspect
             </div>
-            <div className="col-span-1 p-6 lg:p-8 bg-red-100 border-b border-r border-gray-200 font-bold text-gray-700 text-base lg:text-lg uppercase tracking-wider text-center">
+            <div className="col-span-1 p-6 lg:p-8 bg-red-400 border-b border-r border-gray-200 font-bold text-gray-700 text-base lg:text-lg uppercase tracking-wider text-center">
               Conventional Root Canal
             </div>
             <div className="col-span-1 p-6 lg:p-8 bg-[#2E86C1] text-white font-bold text-base lg:text-lg uppercase tracking-wider text-center">
@@ -103,16 +101,16 @@ export default function SpecializedTreatmentsSection() {
                 </h4>
               </div>
               <div className="divide-y divide-gray-100">
-                <div className="p-4 sm:p-5 bg-red-100">
-                  <p className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                <div className="p-4 sm:p-5 bg-red-400">
+                  <p className="text-xs sm:text-sm font-semibold text-white uppercase tracking-wider mb-1.5">
                     Conventional Root Canal
                   </p>
-                  <p className="text-gray-600 text-base leading-relaxed">
+                  <p className="text-white text-base leading-relaxed">
                     {row.conventional}
                   </p>
                 </div>
-                <div className="p-4 sm:p-5 bg-blue-50/50">
-                  <p className="text-xs sm:text-sm font-semibold text-[#2E86C1] uppercase tracking-wider mb-1.5">
+                <div className="p-4 sm:p-5 bg-[#2E86C1]">
+                  <p className="text-xs sm:text-sm font-semibold text-white uppercase tracking-wider mb-1.5">
                     Advanced Microscopic Root Canal
                   </p>
                   <p className="text-gray-800 text-base leading-relaxed font-medium">

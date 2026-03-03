@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const symptoms = [
@@ -70,6 +71,19 @@ export default function RootCanalSection() {
             >
               Call for Consultation
             </a>
+          </div>
+
+          {/* Supporting image - desktop only */}
+          <div className="mt-10 hidden lg:block">
+            <div className="relative w-full max-w-md h-72 rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+              <Image
+                src="/root-canal.png"
+                alt="Painless microscopic root canal treatment at Dental Solutions Thodupuzha"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1280px) 400px, (min-width: 1024px) 360px, 100vw"
+              />
+            </div>
           </div>
         </motion.div>
 

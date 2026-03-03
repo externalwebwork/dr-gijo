@@ -83,12 +83,15 @@ export default function HeroSection() {
 
           {/* Left Content - First on mobile, left column on desktop */}
           <div className="lg:col-span-3 space-y-4 sm:space-y-6 order-1 lg:flex lg:flex-col lg:justify-center lg:w-full">
-            <div className="space-y-3 sm:space-y-4 lg:w-full">
-              <h1 className="hero-title text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-[#2E86C1] leading-[1.15] tracking-tight text-center lg:text-left break-words">
-                Tooth pain keeping you awake?
+            <div className="space-y-2 sm:space-y-3 lg:space-y-4 lg:w-full">
+              <div className="inline-flex items-center justify-center lg:justify-start px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[11px] sm:text-xs font-semibold tracking-[0.18em] text-[#2E86C1] uppercase mx-auto lg:mx-0">
+                Dental Clinic in Thodupuzha
+              </div>
+              <h1 className="hero-title text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-black text-[#2E86C1] leading-[1.15] tracking-tight text-center lg:text-left break-words">
+                Tooth Pain Keeping You Awake?
                 <br />
                 <span className="text-gray-800 font-black">
-                  Get fast, painless relief.
+                  Get fast, Painless Relief.
                 </span>
               </h1>
               <p className="hero-description text-lg sm:text-xl lg:text-xl xl:text-2xl text-gray-600 leading-relaxed font-medium text-center lg:text-left lg:mx-0 mx-auto break-words">
