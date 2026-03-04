@@ -9,12 +9,12 @@ export default function HeroSection() {
     name: "",
     phone: "",
     consultMode: "",
-    date: ""
+    date: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const message = `Hello, I would like to book a dental appointment at your clinic.
 
 Details:
@@ -24,27 +24,29 @@ Details:
 • Preferred Date: ${formData.date}
 
 Please let me know the available time slots.`;
-    
+
     const whatsappUrl = `https://wa.me/918111949498?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, "_blank");
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     const { id, value } = e.target;
-    
+
     // Map the form field names to state properties
-    const fieldName = id === 'consult-mode' ? 'consultMode' : id;
-    
+    const fieldName = id === "consult-mode" ? "consultMode" : id;
+
     setFormData({
       ...formData,
-      [fieldName]: value
+      [fieldName]: value,
     });
   };
 
   const handleDateChange = (date: string) => {
     setFormData({
       ...formData,
-      date
+      date,
     });
   };
 
@@ -54,7 +56,10 @@ Please let me know the available time slots.`;
       className="pt-16 sm:pt-20 lg:min-h-screen relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url(/hero-bg.png)" }}
     >
-      <div className="absolute inset-0 z-0 pointer-events-none bg-white/40" aria-hidden="true" />
+      <div
+        className="absolute inset-0 z-0 pointer-events-none bg-white/40"
+        aria-hidden="true"
+      />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div className="grid lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-start lg:items-center">
           {/* Booking Form - Second on mobile, right column on desktop */}
@@ -68,7 +73,10 @@ Please let me know the available time slots.`;
 
               <form onSubmit={handleSubmit} className="space-y-3 lg:space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2"
+                  >
                     Full Name:
                   </label>
                   <input
@@ -83,7 +91,10 @@ Please let me know the available time slots.`;
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2"
+                  >
                     Phone Number:
                   </label>
                   <input
@@ -98,7 +109,10 @@ Please let me know the available time slots.`;
                 </div>
 
                 <div>
-                  <label htmlFor="consult-mode" className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2">
+                  <label
+                    htmlFor="consult-mode"
+                    className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2"
+                  >
                     Online / Offline:
                   </label>
                   <select
@@ -115,7 +129,10 @@ Please let me know the available time slots.`;
                 </div>
 
                 <div>
-                  <label htmlFor="date" className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2">
+                  <label
+                    htmlFor="date"
+                    className="block text-sm font-bold text-gray-700 mb-1 lg:mb-2"
+                  >
                     Date of Consultation:
                   </label>
                   <DateInput
@@ -146,13 +163,12 @@ Please let me know the available time slots.`;
                 Tooth Pain Keeping You Awake?
                 <br />
                 <span className="text-gray-800 font-black">
-                  Get fast, Painless Relief.
+                  Get Fast, Painless Root Canal.
                 </span>
               </h1>
               <p className="hero-description text-lg sm:text-xl lg:text-xl xl:text-2xl text-gray-600 leading-relaxed font-medium text-center lg:text-left lg:mx-0 mx-auto break-words">
-                Best dental clinic in Thodupuzha offering Painless microscopic root canal treatment.
-                <br className="hidden sm:block" />
-                Advanced microscopic root canal treatment specialist available at Dental Solutions Thodupuzha
+                Get painless, advanced Microscopic root canal treatments at the
+                best dental clinic in Thodupuzha.
               </p>
             </div>
 
