@@ -158,51 +158,58 @@ Please let me know the available time slots.`;
           {/* Left Content - First on mobile, left column on desktop */}
           <div className="lg:col-span-3 space-y-4 sm:space-y-6 order-1 lg:flex lg:flex-col lg:justify-center lg:w-full">
             <div className="space-y-2 sm:space-y-3 lg:space-y-4 lg:w-full">
-              <div className="inline-flex items-center justify-center lg:justify-start px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[11px] sm:text-xs font-semibold tracking-[0.18em] text-[#2E86C1] uppercase mx-auto lg:mx-0">
-                BEST DENTAL CLINIC IN THODUPUZHA
+              <div className="flex justify-center lg:justify-start mb-2">
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[11px] sm:text-xs font-semibold tracking-[0.18em] text-[#2E86C1] uppercase">
+                  BEST DENTAL CLINIC IN THODUPUZHA
+                </div>
               </div>
               <h1 className="hero-title text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-black text-[#2E86C1] leading-[1.15] tracking-tight text-center lg:text-left break-words">
                 Tooth Pain Keeping You Awake?
                 <br />
-                <span className="text-gray-800 font-black">
-                  Get Fast, Painless Root Canal.
+                <span className="text-gray-800 font-black block mt-3 lg:mt-2">
+                  Get Fast & Painless Root Canal.
                 </span>
               </h1>
               <p className="hero-description text-lg sm:text-xl lg:text-xl xl:text-2xl text-gray-600 leading-relaxed font-medium text-center lg:text-left lg:mx-0 mx-auto break-words">
-                Get painless, advanced Microscopic root canal treatments at the
+                Get painless, advanced <span className="font-semibold text-gray-800">Microscopic root canal treatments</span> at the
                 best dental clinic in Thodupuzha.
               </p>
             </div>
 
             {/* Horizontal Stats Bar */}
             <div>
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white/80 backdrop-blur-md border border-gray-100 rounded-2xl px-6 py-4 shadow-lg">
-                <div className="text-center sm:text-left">
-                  <div className="text-2xl font-black text-[#2E86C1]">
-                    12+ Years
+              <div className="flex items-center justify-between bg-white/80 backdrop-blur-md border border-gray-100 rounded-2xl px-4 py-3 shadow-lg">
+                {/* Stat 1 */}
+                <div className="text-center flex-1">
+                  <div className="text-lg sm:text-2xl font-black text-[#2E86C1]">
+                    15+ Years
                   </div>
-                  <div className="text-sm text-gray-600">
-                    Trusted Experience
+                  <div className="text-xs sm:text-sm text-gray-600">
+                    Experience
                   </div>
                 </div>
 
-                <div className="hidden sm:block h-10 w-px bg-gray-200" />
+                <div className="h-8 w-px bg-gray-200 mx-2" />
 
-                <div className="text-center sm:text-left">
-                  <div className="text-2xl font-black text-[#2E86C1]">
+                {/* Stat 2 */}
+                <div className="text-center flex-1">
+                  <div className="text-lg sm:text-2xl font-black text-[#2E86C1]">
                     10,000+
                   </div>
-                  <div className="text-sm text-gray-600">Happy Patients</div>
+                  <div className="text-xs sm:text-sm text-gray-600">
+                    Patients
+                  </div>
                 </div>
 
-                <div className="hidden sm:block h-10 w-px bg-gray-200" />
+                <div className="h-8 w-px bg-gray-200 mx-2" />
 
-                <div className="text-center sm:text-left">
-                  <div className="text-lg font-bold text-gray-900">
+                {/* Stat 3 */}
+                <div className="text-center flex-1">
+                  <div className="text-sm sm:text-lg font-bold text-gray-900">
                     B.D.S, M.D.S
                   </div>
-                  <div className="text-sm text-gray-600">
-                    Root Canal Specialist
+                  <div className="text-xs sm:text-sm text-gray-600">
+                    Specialist
                   </div>
                 </div>
               </div>

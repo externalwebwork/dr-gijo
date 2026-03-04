@@ -6,17 +6,6 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
-    name: "Jowins Jose",
-    time: "4 months ago",
-    image: "/jowin.png",
-    text: "I’ve already had two root canal treatments done by Dr Gijo.He is a highly detailed and committed doctor who explains everything",
-  },
-  {
-    name: "Subhaa Girish",
-    time: "4 months ago",
-    text: "Very good service. Affordable charges.",
-  },
-  {
     name: "Manjusha Sivan",
     time: "5 months ago",
     text: `I recently had an appointment with Dr. Gijo at Gijos Dental Clinic, and the experience was truly outstanding. From start to finish, the visit was marked by professionalism and genuine care.
@@ -40,6 +29,17 @@ The dental nurse was also incredibly supportive, helping me stay calm and confid
 
 I highly recommend Gijo to anyone dealing with dental anxiety or trauma. He’s not just a professional — he truly cares.`,
   },
+  {
+    name: "Jowins Jose",
+    time: "4 months ago",
+    image: "/jowin.png",
+    text: "I’ve already had two root canal treatments done by Dr Gijo.He is a highly detailed and committed doctor who explains everything",
+  },
+  {
+    name: "Subhaa Girish",
+    time: "4 months ago",
+    text: "Very good service. Affordable charges.",
+  },
 ];
 
 const avatarColors = [
@@ -55,13 +55,33 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#2E86C1]">
+          <p className="text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#2E86C1] uppercase">
+            Testimonials
+          </p>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#2E86C1]">
             What People Say
           </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Mobile Slider */}
+        <div className="sm:hidden -mx-5 px-1">
+          <div
+            className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
+            {reviews.map((review, index) => (
+              <div
+                key={index}
+                className="snap-center flex-shrink-0 w-[82vw] max-w-xs"
+              >
+                <ReviewCard review={review} index={index} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop / Tablet Grid */}
+        <div className="hidden sm:grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} index={index} />
           ))}

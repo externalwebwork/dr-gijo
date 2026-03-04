@@ -43,9 +43,9 @@ export default function RootCanalSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
               viewport={{ once: true }}
-              className={`group bg-white rounded-2xl px-6 pt-2 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 
-  ${index === symptoms.length - 1 ? "col-span-2 sm:col-span-1" : ""}
-`}
+              className={`group bg-white rounded-2xl px-6 pt-2 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100
+                ${index === symptoms.length - 1 ? "sm:col-auto col-span-2 sm:col-span-1 mx-auto sm:mx-0 max-w-[200px]" : ""}
+              `}
             >
               <div className="w-30 h-30 lg:w-40 lg:h-40 mx-auto relative">
                 <Image
@@ -64,7 +64,7 @@ export default function RootCanalSection() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-7 lg:mt-10">
           <a
             href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20visit%20at%20Dental%20Solutions%2C%20Thodupuzha."
             target="_blank"

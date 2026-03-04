@@ -2,11 +2,12 @@ export default function WhatsAppFloat() {
   const waUrl =
     "https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20visit%20at%20Dental%20Solutions%2C%20Thodupuzha.";
 
+    const telUrl = "tel:+918111949498";
   return (
     <div className="fixed bottom-6 right-2 z-50 flex flex-col items-center gap-3">
       {/* Primary WhatsApp CTA - above floating icon */}
       <a
-        href={waUrl}
+        href={telUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Schedule a visit on WhatsApp"
