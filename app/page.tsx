@@ -1,6 +1,5 @@
 import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
-import StatsSection from "./components/StatsSection";
 import OsteoarthritisSection from "./components/OsteoarthritisSection";
 import TreatmentProcedureSection from "./components/TreatmentProcedureSection";
 import WhyChooseUsSection from "./components/WhyChooseUsSection";
@@ -22,12 +21,11 @@ export default function Home() {
     <div className="min-h-screen bg-white w-full min-w-0 overflow-x-hidden">
       <Navigation />
       <HeroSection />
-      <StatsSection />
+      <MeetDentistSection />
       <RootCanalSection />
       <RootCanalServicesSection />
       <SpecializedTreatmentsSection />
       <PatientTransformationsSection />
-      <MeetDentistSection />
       <WhyChooseUsSection />
       <FAQSection />
       <ContactSection />

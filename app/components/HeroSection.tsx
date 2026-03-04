@@ -53,14 +53,14 @@ Please let me know the available time slots.`;
   return (
     <section
       id="home"
-      className="pt-16 sm:pt-20 lg:min-h-screen relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="pt-16 sm:pt-20 min-h-[70vh] lg:min-h-0 relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url(/hero-bg.png)" }}
     >
       <div
         className="absolute inset-0 z-0 pointer-events-none bg-white/40"
         aria-hidden="true"
       />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+      <div className="relative z-10 max-w-7xl xl:max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 lg:py-12 xl:py-16">
         <div className="grid lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-start lg:items-center">
           {/* Booking Form - Second on mobile, right column on desktop */}
           <div className="lg:col-span-2 lg:pl-6 order-2 lg:flex lg:items-center lg:min-h-0">
@@ -157,7 +157,7 @@ Please let me know the available time slots.`;
           <div className="lg:col-span-3 space-y-4 sm:space-y-6 order-1 lg:flex lg:flex-col lg:justify-center lg:w-full">
             <div className="space-y-2 sm:space-y-3 lg:space-y-4 lg:w-full">
               <div className="inline-flex items-center justify-center lg:justify-start px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[11px] sm:text-xs font-semibold tracking-[0.18em] text-[#2E86C1] uppercase mx-auto lg:mx-0">
-                Dental Clinic in Thodupuzha
+                BEST DENTAL CLINIC IN THODUPUZHA
               </div>
               <h1 className="hero-title text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-black text-[#2E86C1] leading-[1.15] tracking-tight text-center lg:text-left break-words">
                 Tooth Pain Keeping You Awake?
@@ -172,7 +172,41 @@ Please let me know the available time slots.`;
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3 pt-2">
+            {/* Horizontal Stats Bar */}
+            <div>
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white/80 backdrop-blur-md border border-gray-100 rounded-2xl px-6 py-4 shadow-lg">
+                <div className="text-center sm:text-left">
+                  <div className="text-2xl font-black text-[#2E86C1]">
+                    12+ Years
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    Trusted Experience
+                  </div>
+                </div>
+
+                <div className="hidden sm:block h-10 w-px bg-gray-200" />
+
+                <div className="text-center sm:text-left">
+                  <div className="text-2xl font-black text-[#2E86C1]">
+                    10,000+
+                  </div>
+                  <div className="text-sm text-gray-600">Happy Patients</div>
+                </div>
+
+                <div className="hidden sm:block h-10 w-px bg-gray-200" />
+
+                <div className="text-center sm:text-left">
+                  <div className="text-lg font-bold text-gray-900">
+                    B.D.S, M.D.S
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    Root Canal Specialist
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3 pt-2 lg:pt-4">
               <a
                 href="tel:+918111949498"
                 className="inline-flex items-center justify-center gap-2 bg-[#2E86C1] hover:bg-[#2574a8] text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-xl text-base sm:text-lg lg:text-xl font-bold transition-all hover:shadow-lg hover:-translate-y-1 text-center min-w-0 flex-1 sm:flex-none"

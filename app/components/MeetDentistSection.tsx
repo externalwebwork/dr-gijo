@@ -7,9 +7,7 @@ export default function MeetDentistSection() {
   return (
     <section className="py-10 lg:py-10 bg-white">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -17,44 +15,34 @@ export default function MeetDentistSection() {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-snug">
-              Meet Your Dentist at{" "}
-              <span className="text-[#2E86C1]">Thodupuzha</span>
+              Full-Time Root Canal Specialist <br />
+              <span className="text-[#2E86C1]">(Endodontist)</span>
             </h2>
 
-            <p className="mt-6 text-gray-600 text-base sm:text-lg">
-              A family practice you can trust. Dr. Gijo (MDS) is dedicated to bringing 
-              world-class dental care to our Thodupuzha community.
-            </p>
-
-            {/* Doctor Name */}
             <div className="mt-8">
-              <h3 className="text-3xl font-semibold text-gray-900">
+              <h3 className="text-3xl lg:text-4xl font-bold text-gray-900">
                 Dr. Gijo BDS, MDS
               </h3>
-              <p className="text-[#2E86C1] font-medium mt-1">
-                Micro-Resto-Endodontist
-              </p>
-              <p className="text-gray-500 mt-1">
-                Biomimetic Dentist & Tooth Saver
+
+              <p className="text-[#2E86C1] font-semibold mt-2 text-lg">
+                (Micro-Resto-Endodontist)
               </p>
             </div>
 
             {/* Highlights */}
             <div className="mt-4 space-y-1">
-
               <div className="flex items-start gap-2 sm:gap-3">
                 <div className="w-2 h-2 sm:w-3 sm:h-3 flex-shrink-0 mt-2 bg-[#2E86C1] rounded-full"></div>
                 <p className="text-gray-700">
-                  Highly qualified and trained in Microscopic Root Canal Treatment
+                  Specialised in Microscopic Root Canal Treatment
                 </p>
               </div>
 
               <div className="flex items-start gap-2 sm:gap-3">
                 <div className="w-2 h-2 sm:w-3 sm:h-3 flex-shrink-0 mt-2 bg-[#2E86C1] rounded-full"></div>
                 <p className="text-gray-700">
-                  Focus on biomimetic dentistry
+                  Biomimetic Dentist & Tooth Saver
                 </p>
               </div>
 
@@ -64,7 +52,6 @@ export default function MeetDentistSection() {
                   Minimal invasive dentistry approach
                 </p>
               </div>
-
             </div>
 
             {/* CTA */}
@@ -78,7 +65,6 @@ export default function MeetDentistSection() {
                 Book an Appointment
               </a>
             </div>
-
           </motion.div>
 
           {/* RIGHT IMAGE */}
@@ -96,9 +82,7 @@ export default function MeetDentistSection() {
               priority
             />
           </motion.div>
-
         </div>
-
       </div>
     </section>
   );
