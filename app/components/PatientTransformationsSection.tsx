@@ -143,7 +143,7 @@ export default function PatientTransformationsSection() {
   };
 
   return (
-    <section className="py-10 lg:py-10 bg-[#F9FBFC]">
+    <section className="py-10 lg:py-10 bg-[#EAF4FB]">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
         {/* Heading */}
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
@@ -217,12 +217,12 @@ export default function PatientTransformationsSection() {
         {/* CTA */}
         <div className="mt-6">
           <a
-            href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20your%20clinic.%20I%20am%20interested%20in%20your%20services%20after%20seeing%20the%20patient%20transformations%20and%20would%20like%20to%20know%20more%20about%20available%20time%20slots.%20Please%20let%20me%20know%20the%20next%20steps%20for%20booking."
+            href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20visit%20at%20Dental%20Solutions%2C%20Thodupuzha."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#2E86C1] text-white px-10 py-4 rounded-full font-semibold hover:bg-[#1E6FA8] transition shadow-sm"
           >
-            Book Your Consultation
+            SCHEDULE A VISIT
           </a>
         </div>
       </div>

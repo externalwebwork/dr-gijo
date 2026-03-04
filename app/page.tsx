@@ -15,6 +15,7 @@ import RootCanalSection from "./components/RootCanalSection";
 import RootCanalServicesSection from "./components/RootCanalServicesSection";
 import PatientTransformationsSection from "./components/PatientTransformationsSection";
 import MeetDentistSection from "./components/MeetDentistSection";
+import AdvancedComparisonSection from "./components/AdvancedComparisonSection";
 
 export default function Home() {
   return (
@@ -24,9 +25,10 @@ export default function Home() {
       <MeetDentistSection />
       <RootCanalSection />
       <RootCanalServicesSection />
-      <SpecializedTreatmentsSection />
+      <AdvancedComparisonSection />
       <PatientTransformationsSection />
       <WhyChooseUsSection />
+      <TestimonialsSection />
       <FAQSection />
       <ContactSection />
       <Footer />

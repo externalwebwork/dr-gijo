@@ -15,7 +15,7 @@ export default function HeroSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const message = `Hello, I would like to book a dental appointment at your clinic.
+    const message = `Hello, I would like to schedule a visit at Dental Solutions, Thodupuzha.
 
 Details:
 • Name: ${formData.name}
@@ -25,7 +25,9 @@ Details:
 
 Please let me know the available time slots.`;
 
-    const whatsappUrl = `https://wa.me/918111949498?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/918111949498?text=${encodeURIComponent(
+      message,
+    )}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -147,7 +149,7 @@ Please let me know the available time slots.`;
                   type="submit"
                   className="w-full bg-[#2E86C1] hover:bg-[#2574a8] text-white py-3 lg:py-4 rounded-lg font-bold transition-all hover:shadow-lg hover:-translate-y-0.5 text-base lg:text-base mt-2"
                 >
-                  Check Availability
+                  SCHEDULE A VISIT
                 </button>
               </form>
             </div>

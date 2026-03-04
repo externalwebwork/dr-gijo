@@ -125,12 +125,12 @@ export default function SpecializedTreatmentsSection() {
         {/* CTA */}
         <div className="mt-12 lg:mt-14 text-center">
           <a
-            href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20your%20clinic.%20I%20am%20interested%20in%20your%20advanced%20microscopic%20root%20canal%20treatment%20and%20would%20like%20to%20know%20more%20about%20available%20time%20slots.%20Please%20let%20me%20know%20the%20next%20steps%20for%20booking."
+            href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20visit%20at%20Dental%20Solutions%2C%20Thodupuzha."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-[#2E86C1] hover:bg-[#2574a8] text-white px-8 py-4 rounded-xl font-semibold text-base transition-colors shadow-lg hover:shadow-xl"
           >
-            Book Your Consultation
+            SCHEDULE A VISIT
           </a>
         </div>
       </div>

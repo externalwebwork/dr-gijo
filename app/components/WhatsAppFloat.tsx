@@ -1,13 +1,15 @@
 export default function WhatsAppFloat() {
   const waUrl =
-    "https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20Dental%20Solutions%2C%20Thodupuzha.";
+    "https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20visit%20at%20Dental%20Solutions%2C%20Thodupuzha.";
 
   return (
     <div className="fixed bottom-6 right-2 z-50 flex flex-col items-center gap-3">
-      {/* Call - above WhatsApp */}
+      {/* Primary WhatsApp CTA - above floating icon */}
       <a
-        href="tel:+918111949498"
-        aria-label="Call now"
+        href={waUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Schedule a visit on WhatsApp"
         className="flex h-14 w-14 items-center justify-center rounded-full bg-[#2E86C1] text-white shadow-lg transition-all hover:scale-110 hover:bg-[#2574a8] hover:shadow-xl"
       >
         <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">

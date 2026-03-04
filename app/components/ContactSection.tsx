@@ -146,7 +146,7 @@ Please let me know the next steps for booking.`;
                   type="submit"
                   className="w-full inline-flex items-center justify-center bg-[#2E86C1] hover:bg-[#2574a8] text-white py-3 lg:py-4 rounded-lg font-bold transition-colors text-base lg:text-lg"
                 >
-                  Book Appointment
+                  SCHEDULE A VISIT
                 </button>
               </form>
             </div>

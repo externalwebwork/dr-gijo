@@ -58,13 +58,13 @@ export default function MobileNav() {
                 +91 8111949498
               </a>
               <a
-                href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20Dental%20Solutions%2C%20Thodupuzha."
+                href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20visit%20at%20Dental%20Solutions%2C%20Thodupuzha."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleLinkClick}
                 className="flex items-center justify-center gap-2 w-full bg-[#2E86C1] hover:bg-[#2574a8] text-white py-3 px-4 rounded-xl font-bold text-base transition-colors"
               >
-                Book Appointment
+                SCHEDULE A VISIT
               </a>
             </div>
           </div>

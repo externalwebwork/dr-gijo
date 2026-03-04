@@ -35,15 +35,15 @@ export default function RootCanalServicesSection() {
     <section className="py-10 lg:py-10 bg-[#F9FBFC]">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-5">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
             Our <span className="text-[#2E86C1]">Root Canal</span> Treatment
             Services
           </h2>
           <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-base sm:text-lg">
-            Advanced microscope-assisted root canal to relieve pain, remove
-            infection, and save your natural tooth. Treatment is planned based
-            on your tooth condition.
+            Advanced root canal treatment using a microscope to remove
+            infection, reduce pain, and save your natural tooth, planned
+            according to your tooth’s condition.
           </p>
         </div>
 
@@ -85,10 +85,12 @@ export default function RootCanalServicesSection() {
 
                   <div className="mt-6 flex justify-center lg:justify-start">
                     <a
-                      href="tel:+918111949498"
+                      href="https://wa.me/918111949498?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20visit%20at%20Dental%20Solutions%2C%20Thodupuzha."
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-block bg-[#2E86C1] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1E6FA8] transition"
                     >
-                      Call Now
+                      SCHEDULE A VISIT
                     </a>
                   </div>
                 </div>
