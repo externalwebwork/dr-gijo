@@ -228,7 +228,7 @@ export default function HeroSection() {
             </div>
 
             {/* Horizontal Stats Bar */}
-            <div>
+            <div id="stats">
               <div className="flex items-center justify-between bg-white/80 backdrop-blur-md border border-gray-100 rounded-2xl px-4 py-3 shadow-lg">
                 {/* Stat 1 */}
                 <div className="text-center flex-1 min-w-0">

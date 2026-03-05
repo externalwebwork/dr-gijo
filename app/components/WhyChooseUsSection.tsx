@@ -21,6 +21,7 @@ const features = [
 export default function WhyChooseUsSection() {
   return (
     <section
+      id="technology"
       className="py-8 lg:py-10 relative bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url(/section-bg.png)" }}
     >

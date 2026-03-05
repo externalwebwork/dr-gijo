@@ -28,6 +28,8 @@
 html {
   overflow-x: clip;
   width: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* offset for fixed navbar */
 }
 
 body {

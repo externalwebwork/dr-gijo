@@ -32,7 +32,10 @@ const services = [
 
 export default function RootCanalServicesSection() {
   return (
-    <section className="py-10 lg:py-10 bg-[#F9FBFC]">
+    <section
+      id="treatments"
+      className="py-10 lg:py-10 bg-[#F9FBFC]"
+    >
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-5">

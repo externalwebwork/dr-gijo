@@ -12,7 +12,7 @@ export default function MobileNav() {
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#treatments", label: "Services" },
-    { href: "#stats", label: "Why Choose Us" },
+    { href: "#technology", label: "Our Technology" },
     { href: "#root-canal", label: "Root Canal" },
     { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },

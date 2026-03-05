@@ -47,10 +47,10 @@ export default function Navigation() {
               Treatment
             </a>
             <a
-              href="#why-choose-us"
+              href="#technology"
               className="text-gray-700 hover:text-[#2E86C1] font-medium transition-colors text-base"
             >
-              Why Choose Us
+              Our Technology
             </a>
             <a
               href="#faq"
