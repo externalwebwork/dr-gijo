@@ -148,7 +148,7 @@ Please let me know the available time slots.`;
                   type="submit"
                   className="w-full bg-[#2E86C1] hover:bg-[#2574a8] text-white py-3 lg:py-4 rounded-lg font-bold transition-all hover:shadow-lg hover:-translate-y-0.5 text-base lg:text-base mt-2"
                 >
-                  SCHEDULE A VISIT
+                  BOOK A VISIT
                 </button>
               </form>
             </div>
