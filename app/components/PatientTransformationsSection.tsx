@@ -177,6 +177,13 @@ export default function PatientTransformationsSection() {
                 />
               </motion.div>
             </AnimatePresence>
+            {/* Before / After labels */}
+            <div className="absolute top-3 left-3 z-10 px-3 py-1.5 rounded-full bg-black/70 text-white text-xs sm:text-sm font-semibold">
+              Before
+            </div>
+            <div className="absolute top-3 right-3 z-10 px-3 py-1.5 rounded-full bg-[#2E86C1] text-white text-xs sm:text-sm font-semibold">
+              After
+            </div>
           </div>
 
           {/* Navigation Buttons */}
