@@ -55,11 +55,10 @@ Please let me know the available time slots.`;
   return (
     <section
       id="home"
-      className="pt-16 sm:pt-20 min-h-[70vh] lg:min-h-0 relative overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url(/hero-bg.png)" }}
+      className="pt-16 sm:pt-20 min-h-[70vh] lg:min-h-0 relative overflow-hidden bg-cover bg-center bg-no-repeat bg-[url('/mob-hero.png')] lg:bg-[url('/hero-bg.png')]"
     >
       <div
-        className="absolute inset-0 z-0 pointer-events-none bg-white/40"
+        className="absolute inset-0 z-0 pointer-events-none max-lg:bg-transparent lg:bg-white/40"
         aria-hidden="true"
       />
       <div className="relative z-10 max-w-7xl xl:max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 lg:py-12 xl:py-16">
@@ -171,8 +170,11 @@ Please let me know the available time slots.`;
                 </span>
               </h1>
               <p className="hero-description text-lg sm:text-xl lg:text-xl xl:text-2xl text-gray-600 leading-relaxed font-medium text-center lg:text-left lg:mx-0 mx-auto break-words">
-                Get painless, advanced <span className="font-semibold text-gray-800">Microscopic root canal treatments</span> at the
-                best dental clinic in Thodupuzha.
+                Advanced{" "}
+                <span className="font-semibold text-gray-800">
+                  Microscopic root canal treatments
+                </span>{" "}
+                designed to eliminate infection and end your pain quickly.
               </p>
             </div>
 
@@ -180,8 +182,8 @@ Please let me know the available time slots.`;
             <div>
               <div className="flex items-center justify-between bg-white/80 backdrop-blur-md border border-gray-100 rounded-2xl px-4 py-3 shadow-lg">
                 {/* Stat 1 */}
-                <div className="text-center flex-1">
-                  <div className="text-lg sm:text-2xl font-black text-[#2E86C1]">
+                <div className="text-center flex-1 min-w-0">
+                  <div className="text-lg sm:text-2xl font-black text-[#2E86C1] whitespace-nowrap">
                     15+ Years
                   </div>
                   <div className="text-xs sm:text-sm text-gray-600">
@@ -189,11 +191,11 @@ Please let me know the available time slots.`;
                   </div>
                 </div>
 
-                <div className="h-8 w-px bg-gray-200 mx-2" />
+                <div className="h-8 w-px bg-gray-200 mx-2 flex-shrink-0" />
 
                 {/* Stat 2 */}
-                <div className="text-center flex-1">
-                  <div className="text-lg sm:text-2xl font-black text-[#2E86C1]">
+                <div className="text-center flex-1 min-w-0">
+                  <div className="text-lg sm:text-2xl font-black text-[#2E86C1] whitespace-nowrap">
                     10,000+
                   </div>
                   <div className="text-xs sm:text-sm text-gray-600">
@@ -201,11 +203,11 @@ Please let me know the available time slots.`;
                   </div>
                 </div>
 
-                <div className="h-8 w-px bg-gray-200 mx-2" />
+                <div className="h-8 w-px bg-gray-200 mx-2 flex-shrink-0" />
 
                 {/* Stat 3 */}
-                <div className="text-center flex-1">
-                  <div className="text-sm sm:text-lg font-bold text-gray-900">
+                <div className="text-center flex-1 min-w-0">
+                  <div className="text-sm sm:text-lg font-bold text-gray-900 whitespace-nowrap">
                     B.D.S, M.D.S
                   </div>
                   <div className="text-xs sm:text-sm text-gray-600">

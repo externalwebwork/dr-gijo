@@ -126,9 +126,9 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const transformations = [
-  "/transformations/transformation1.webp",
-  "/transformations/transformation2.webp",
-  "/transformations/transformation3.jpeg",
+  "/transformation/1.png",
+  "/transformation/2.png",
+  "/transformation/3.png",
 ];
 
 export default function PatientTransformationsSection() {
@@ -155,16 +155,9 @@ export default function PatientTransformationsSection() {
           expert dental care.
         </p>
 
-        {/* Slider */}
+        {/* Slider - container uses 16:9 ratio; use 16:9 images for best fit (e.g. 1920×1080 desktop, 1080×608 mobile) */}
         <div className="relative mt-5">
-          <div
-            className="relative w-full 
-  h-[220px] 
-  sm:h-[320px] 
-  md:h-[380px] 
-  lg:h-[500px] 
-  rounded-3xl overflow-hidden shadow-md"
-          >
+          <div className="relative w-full aspect-video max-h-[500px] rounded-3xl overflow-hidden shadow-md bg-gray-100">
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
@@ -178,7 +171,8 @@ export default function PatientTransformationsSection() {
                   src={transformations[index]}
                   alt="Dental transformation"
                   fill
-                  className="object-cover"
+                  className="object-contain sm:object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 1152px"
                   priority
                 />
               </motion.div>
