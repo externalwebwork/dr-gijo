@@ -123,6 +123,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const transformations = [
@@ -188,17 +189,21 @@ export default function PatientTransformationsSection() {
 
           {/* Navigation Buttons */}
           <button
+            type="button"
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-md w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition"
+            aria-label="Previous slide"
+            className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#2E86C1] text-white shadow-lg flex items-center justify-center hover:bg-[#2574a8] hover:scale-105 active:scale-95 transition-all duration-200"
           >
-            ‹
+            <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={2.5} />
           </button>
 
           <button
+            type="button"
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-md w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition"
+            aria-label="Next slide"
+            className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#2E86C1] text-white shadow-lg flex items-center justify-center hover:bg-[#2574a8] hover:scale-105 active:scale-95 transition-all duration-200"
           >
-            ›
+            <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={2.5} />
           </button>
 
           {/* Dots Indicator */}
