@@ -9,21 +9,61 @@ export default function ContactSection() {
     phone: "",
     message: ""
   });
+  const [result, setResult] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const message = `Hello, I would like to book a dental appointment at your clinic.
+    setIsSubmitting(true);
+    setResult("");
 
-Details:
-• Name: ${formData.firstName} ${formData.lastName}
-• Phone: ${formData.phone}
-• Dental Needs: ${formData.message}
-
-Please let me know the next steps for booking.`;
-    
-    const whatsappUrl = `https://wa.me/918111949498?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    try {
+      const formElement = e.target as HTMLFormElement;
+      const formDataObj = new FormData(formElement);
+      
+      // Add access key
+      formDataObj.append("access_key", "cf75a2ca-fa5c-415e-bbe4-e002da1a0217");
+      
+      // Create custom subject with user name
+      const firstName = formDataObj.get("firstName") as string;
+      const lastName = formDataObj.get("lastName") as string;
+      const fullName = `${firstName} ${lastName}`;
+      const subject = `${fullName} - Dental Contact Form from Dental Solutions, Thodupuzha`;
+      formDataObj.append("subject", subject);
+      
+      // Add additional form data
+      formDataObj.append("dental_needs", formData.message);
+      
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataObj
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        setResult("Thank you! We'll contact you soon to discuss your dental needs.");
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          message: ""
+        });
+        formElement.reset();
+      } else {
+        setResult("Something went wrong. Please try again or call us directly.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setResult("Network error. Please try again or call us directly.");
+    } finally {
+      setIsSubmitting(false);
+      // Hide result message after 5 seconds
+      setTimeout(() => {
+        setResult("");
+      }, 5000);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -108,6 +148,7 @@ Please let me know the next steps for booking.`;
                   <input
                     type="text"
                     id="firstName"
+                    name="firstName"
                     placeholder="First Name"
                     className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium bg-white text-gray-900 placeholder:text-gray-500"
                     value={formData.firstName}
@@ -117,6 +158,7 @@ Please let me know the next steps for booking.`;
                   <input
                     type="text"
                     id="lastName"
+                    name="lastName"
                     placeholder="Last Name"
                     className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium bg-white text-gray-900 placeholder:text-gray-500"
                     value={formData.lastName}
@@ -127,6 +169,7 @@ Please let me know the next steps for booking.`;
                 <input
                   type="tel"
                   id="phone"
+                  name="phone"
                   placeholder="Phone Number"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium bg-white text-gray-900 placeholder:text-gray-500"
                   value={formData.phone}
@@ -135,6 +178,7 @@ Please let me know the next steps for booking.`;
                 />
                 <textarea
                   id="message"
+                  name="message"
                   placeholder="Tell us about your dental needs..."
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] font-medium bg-white text-gray-900 placeholder:text-gray-500"
@@ -144,10 +188,22 @@ Please let me know the next steps for booking.`;
                 />
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center bg-[#2E86C1] hover:bg-[#2574a8] text-white py-3 lg:py-4 rounded-lg font-bold transition-colors text-base lg:text-lg"
+                  disabled={isSubmitting}
+                  className="w-full inline-flex items-center justify-center bg-[#2E86C1] hover:bg-[#2574a8] disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-3 lg:py-4 rounded-lg font-bold transition-colors text-base lg:text-lg"
                 >
-                  SCHEDULE A VISIT
+                  {isSubmitting ? "Submitting..." : "SCHEDULE A VISIT"}
                 </button>
+
+                {/* Result Message */}
+                {result && (
+                  <div className={`mt-3 p-3 rounded-lg text-sm font-medium text-center ${
+                    result.includes("Thank you") 
+                      ? "bg-green-50 text-green-800 border border-green-200" 
+                      : "bg-red-50 text-red-800 border border-red-200"
+                  }`}>
+                    {result}
+                  </div>
+                )}
               </form>
             </div>
           </div>

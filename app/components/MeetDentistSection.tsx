@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function MeetDentistSection() {
   return (
-    <section className="py-10 lg:py-10 bg-white">
+    <section className="py-10 lg:py-10 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-8 lg:mb-10">
@@ -27,7 +27,7 @@ export default function MeetDentistSection() {
           >
             {/* Name */}
             <div>
-              <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                 Dr. Gijo BDS, MDS
               </h3>
 
@@ -39,15 +39,21 @@ export default function MeetDentistSection() {
             </div>
 
             {/* Highlights */}
-            <div className="mt-6 space-y-1">
+            <div className="mt-5 space-y-1 -ml-2 sm:ml-0 text-left">
               {[
                 "Specialised in Microscopic Root Canal Treatment",
                 "Biomimetic Dentist & Tooth Saver",
                 "Minimal invasive dentistry approach",
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="w-3 h-3 flex-shrink-0 mt-2 bg-[#2E86C1] rounded-full" />
-                  <p className="text-gray-700 text-base lg:text-lg">{item}</p>
+                <div key={i} className="flex items-start gap-2">
+                  <div className="w-2 h-2 lg:w-3 lg:h-3 mr-2 flex-shrink-0 mt-2 bg-[#2E86C1] rounded-full" />
+                  <p
+                    className={`text-gray-700 text-sm sm:text-base lg:text-lg ${
+                      i === 0 ? "" : "whitespace-nowrap"
+                    }`}
+                  >
+                    {item}
+                  </p>
                 </div>
               ))}
             </div>

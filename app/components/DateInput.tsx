@@ -47,14 +47,6 @@ export default function DateInput({
         className={`${className} text-gray-900 bg-white cursor-pointer`}
         min={new Date().toISOString().split('T')[0]}
       />
-      {showPlaceholder && (
-        <span
-          className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 text-sm font-medium bg-white px-1"
-          aria-hidden
-        >
-          Select date
-        </span>
-      )}
     </div>
   );
 }

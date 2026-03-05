@@ -11,24 +11,59 @@ export default function HeroSection() {
     consultMode: "",
     date: "",
   });
+  const [result, setResult] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setResult("");
 
-    const message = `Hello, I would like to schedule a visit at Dental Solutions, Thodupuzha.
-
-Details:
-• Name: ${formData.name}
-• Phone: ${formData.phone}
-• Consultation Mode: ${formData.consultMode}
-• Preferred Date: ${formData.date}
-
-Please let me know the available time slots.`;
-
-    const whatsappUrl = `https://wa.me/918111949498?text=${encodeURIComponent(
-      message,
-    )}`;
-    window.open(whatsappUrl, "_blank");
+    try {
+      const formElement = e.target as HTMLFormElement;
+      const formDataObj = new FormData(formElement);
+      
+      // Add access key
+      formDataObj.append("access_key", "1ab65d55-63eb-4b5e-ae1b-ac61b161642f");
+      
+      // Create custom subject with user name
+      const name = formDataObj.get("name") as string;
+      const subject = `${name} - Dental Appointment Request from Dental Solutions, Thodupuzha`;
+      formDataObj.append("subject", subject);
+      
+      // Add additional form data
+      formDataObj.append("consultation_mode", formData.consultMode);
+      formDataObj.append("preferred_date", formData.date);
+      
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataObj
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        setResult("Thank you! We'll contact you soon to confirm your appointment.");
+        // Reset form
+        setFormData({
+          name: "",
+          phone: "",
+          consultMode: "",
+          date: "",
+        });
+      } else {
+        setResult("Something went wrong. Please try again or call us directly.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setResult("Network error. Please try again or call us directly.");
+    } finally {
+      setIsSubmitting(false);
+      // Hide result message after 5 seconds
+      setTimeout(() => {
+        setResult("");
+      }, 5000);
+    }
   };
 
   const handleInputChange = (
@@ -82,6 +117,7 @@ Please let me know the available time slots.`;
                   </label>
                   <input
                     id="name"
+                    name="name"
                     type="text"
                     placeholder="Enter your full name"
                     className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
@@ -100,6 +136,7 @@ Please let me know the available time slots.`;
                   </label>
                   <input
                     id="phone"
+                    name="phone"
                     type="tel"
                     placeholder="Your number"
                     className="w-full px-3 py-2.5 lg:py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86C1] focus:border-[#2E86C1] transition-all text-sm lg:text-base font-medium placeholder:text-gray-500"
@@ -146,10 +183,22 @@ Please let me know the available time slots.`;
 
                 <button
                   type="submit"
-                  className="w-full bg-[#2E86C1] hover:bg-[#2574a8] text-white py-3 lg:py-4 rounded-lg font-bold transition-all hover:shadow-lg hover:-translate-y-0.5 text-base lg:text-base mt-2"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#2E86C1] hover:bg-[#2574a8] disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-3 lg:py-4 rounded-lg font-bold transition-all hover:shadow-lg hover:-translate-y-0.5 text-base lg:text-base mt-2"
                 >
-                  BOOK A VISIT
+                  {isSubmitting ? "Submitting..." : "BOOK A VISIT"}
                 </button>
+
+                {/* Result Message */}
+                {result && (
+                  <div className={`mt-3 p-3 rounded-lg text-sm font-medium text-center ${
+                    result.includes("Thank you") 
+                      ? "bg-green-50 text-green-800 border border-green-200" 
+                      : "bg-red-50 text-red-800 border border-red-200"
+                  }`}>
+                    {result}
+                  </div>
+                )}
               </form>
             </div>
           </div>
