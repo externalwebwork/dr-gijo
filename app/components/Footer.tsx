@@ -51,10 +51,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#stats"
+                  href="#technology"
                   className="hover:text-[#2E86C1] transition-colors font-medium text-sm sm:text-base"
                 >
-                  Why Choose Us
+                  Our Technology
                 </a>
               </li>
               <li>
