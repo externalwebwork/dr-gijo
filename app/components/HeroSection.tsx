@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import DateInput from "./DateInput";
 
 export default function HeroSection() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -43,14 +45,8 @@ export default function HeroSection() {
       const data = await response.json();
       
       if (data.success) {
-        setResult("Thank you! We'll contact you soon to confirm your appointment.");
-        // Reset form
-        setFormData({
-          name: "",
-          phone: "",
-          consultMode: "",
-          date: "",
-        });
+        router.push("/success");
+        return;
       } else {
         setResult("Something went wrong. Please try again or call us directly.");
       }

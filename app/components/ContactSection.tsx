@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ContactSection() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -42,15 +44,8 @@ export default function ContactSection() {
       const data = await response.json();
       
       if (data.success) {
-        setResult("Thank you! We'll contact you soon to discuss your dental needs.");
-        // Reset form
-        setFormData({
-          firstName: "",
-          lastName: "",
-          phone: "",
-          message: ""
-        });
-        formElement.reset();
+        router.push("/success");
+        return;
       } else {
         setResult("Something went wrong. Please try again or call us directly.");
       }
