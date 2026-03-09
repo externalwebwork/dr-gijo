@@ -45,6 +45,16 @@ export default function HeroSection() {
       const data = await response.json();
       
       if (data.success) {
+        if (typeof window !== "undefined" && (window as any).dataLayer) {
+          (window as any).dataLayer.push({
+            event: "hero_form_submit",
+            formName: "Hero Appointment Form",
+            name: formData.name,
+            phone: formData.phone,
+            consultMode: formData.consultMode,
+            date: formData.date,
+          });
+        }
         router.push("/success");
         return;
       } else {

@@ -44,6 +44,16 @@ export default function ContactSection() {
       const data = await response.json();
       
       if (data.success) {
+        if (typeof window !== "undefined" && (window as any).dataLayer) {
+          (window as any).dataLayer.push({
+            event: "contact_form_submit",
+            formName: "Contact Section Form",
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            phone: formData.phone,
+            message: formData.message,
+          });
+        }
         router.push("/success");
         return;
       } else {

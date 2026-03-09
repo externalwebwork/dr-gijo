@@ -3,8 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import { useEffect } from "react";
 
 export default function SuccessPage() {
+  useEffect(() => {
+    if (typeof window !== "undefined" && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: "form_submission_success",
+        page: "/success",
+      });
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       <Navigation />
